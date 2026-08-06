@@ -79,7 +79,7 @@ export const HeroSection: React.FC = () => {
           className="relative w-full text-center"
         >
           {/* Main Oversized Title */}
-          <h1 className="font-display font-black text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight uppercase select-none text-transparent bg-clip-text bg-gradient-to-br from-offwhite via-offwhite to-dimwhite text-center">
+          <h1 className="font-display font-black text-5xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight uppercase select-none text-transparent bg-clip-text bg-gradient-to-br from-offwhite via-offwhite to-dimwhite text-center">
             AASHAV
           </h1>
 

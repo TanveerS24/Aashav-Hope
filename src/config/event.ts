@@ -3,7 +3,7 @@ export interface CoordinatorConfig {
   role: string;
   email: string;
   phone: string;
-  linkedin: string;
+  linkedin?: string;
 }
 
 export interface EventConfig {
@@ -28,6 +28,7 @@ export interface EventConfig {
   selectionAnnounceDate: string;
   selectionConfirmDeadline: string;
   coordinator: CoordinatorConfig;
+  coordinators: CoordinatorConfig[];
   sihContext: string;
 }
 
@@ -58,12 +59,26 @@ export const EVENT_CONFIG: EventConfig = {
   selectionConfirmDeadline: "21 August 2026 before 10:00 PM",
 
   coordinator: {
-    name: "YOUR_NAME",
+    name: "S Tanveer Muhammed",
     role: "Head Coordinator",
-    email: "YOUR_EMAIL",
-    phone: "YOUR_PHONE",
-    linkedin: "YOUR_LINKEDIN",
+    email: "stanveer1809@gmail.com",
+    phone: "+91 8610534505",
   },
+
+  coordinators: [
+    {
+      name: "S Tanveer Muhammed",
+      role: "Head Coordinator",
+      email: "stanveer1809@gmail.com",
+      phone: "+91 8610534505",
+    },
+    {
+      name: "FACULTY_COORDINATOR_NAME",
+      role: "Faculty Coordinator",
+      email: "FACULTY_EMAIL",
+      phone: "FACULTY_PHONE",
+    },
+  ],
 
   sihContext:
     "Aashav brings real previous-year Smart India Hackathon problem statements to students. Test your technical execution, problem breakdown, and presentation rigor before SIH 2026.",
