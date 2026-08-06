@@ -19,10 +19,10 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-between pt-28 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-between pt-28 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden"
     >
       {/* Top Meta System Badge */}
-      <div className="flex flex-wrap items-center justify-between gap-4 z-10 pt-4">
+      <div className="flex flex-wrap items-center justify-center gap-4 z-10 pt-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -57,13 +57,13 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* Main Title & Hero Visual Composition */}
-      <div className="my-auto z-10 py-10 flex flex-col items-start justify-center">
+      <div className="my-auto z-10 py-10 flex flex-col items-center text-center justify-center">
         {/* Sub-label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex items-center gap-2 mb-4"
+          className="flex items-center justify-center gap-2 mb-4"
         >
           <Terminal className="w-4 h-4 text-sunrise-brand" />
           <span className="text-xs sm:text-sm font-mono tracking-widest text-dimwhite uppercase">
@@ -76,22 +76,22 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative w-full"
+          className="relative w-full text-center"
         >
           {/* Main Oversized Title */}
-          <h1 className="font-display font-black text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight uppercase select-none text-transparent bg-clip-text bg-gradient-to-br from-offwhite via-offwhite to-dimwhite">
+          <h1 className="font-display font-black text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] leading-[0.85] tracking-tight uppercase select-none text-transparent bg-clip-text bg-gradient-to-br from-offwhite via-offwhite to-dimwhite text-center">
             AASHAV
           </h1>
 
-          {/* Integrated HOPE / 2026 Graphic Element */}
-          <div className="flex flex-wrap items-baseline gap-4 sm:gap-6 mt-2 md:-mt-4">
+          {/* Integrated THE HOPE / 2026 Graphic Element */}
+          <div className="flex flex-wrap items-baseline justify-center gap-4 sm:gap-6 mt-2 md:-mt-4">
             <span className="font-display font-black text-4xl sm:text-6xl md:text-7xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-sunrise-brand via-cyan-brand to-violet-brand">
-              HOPE
+              THE HOPE
             </span>
             <span className="font-mono text-xl sm:text-3xl text-cyan-brand/80 font-light tracking-widest">
               / 2026
             </span>
-            <div className="h-[2px] flex-grow max-w-xs bg-gradient-to-r from-cyan-brand/50 to-transparent self-center hidden sm:block" />
+            <div className="h-[2px] w-24 bg-gradient-to-r from-cyan-brand/50 to-transparent self-center hidden sm:block" />
           </div>
         </motion.div>
 
@@ -100,9 +100,9 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-6 max-w-2xl text-base sm:text-xl text-dimwhite font-sans font-light leading-relaxed"
+          className="mt-6 max-w-2xl text-base sm:text-xl text-dimwhite font-sans font-light leading-relaxed mx-auto text-center"
         >
-          &quot;{EVENT_CONFIG.tagline}&quot; — An industry-grade hybrid hackathon solving real previous-year Smart India Hackathon problem statements.
+          &quot;{EVENT_CONFIG.tagline}&quot; — An industry-grade inter-college hybrid hackathon solving real previous-year Smart India Hackathon problem statements.
         </motion.p>
 
         {/* Key Event Badges */}
@@ -110,7 +110,7 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 font-mono text-xs"
+          className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 font-mono text-xs"
         >
           <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-surface-border text-offwhite flex items-center gap-2">
             <Users className="w-3.5 h-3.5 text-cyan-brand" />
@@ -133,7 +133,7 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-10 flex flex-wrap items-center gap-4 w-full sm:w-auto"
+          className="mt-10 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto"
         >
           <button
             onClick={handleRegisterClick}

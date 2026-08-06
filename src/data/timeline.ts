@@ -30,7 +30,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
         badge: "START",
       },
       {
-        time: "20 AUG 2026 — 2:00 PM",
+        time: "20 AUG 2026 — 10:00 AM",
         title: "Registration Closes",
         description: "Strict submission cutoff. No late team registrations will be accepted.",
         badge: "DEADLINE",
@@ -46,7 +46,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     status: "upcoming",
     events: [
       {
-        time: "21 AUG 2026 — Before 10:00 AM",
+        time: "20 AUG 2026 — Before 10:00 PM",
         title: "Selected Team List Announced",
         description: "Shortlisted teams notified via official channel & dashboard.",
         badge: "ANNOUNCEMENT",

@@ -16,7 +16,7 @@ export const LocationSection: React.FC = () => {
   };
 
   return (
-    <section id="location" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="location" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
       {/* Container Card */}
       <div className="relative rounded-lg bg-surface/90 border border-surface-border p-8 sm:p-12 overflow-hidden backdrop-blur-xl">
         {/* Vector Radar Mesh Visual Background */}
@@ -25,8 +25,8 @@ export const LocationSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
           {/* Left Venue Information */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
+          <div className="lg:col-span-7 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
               <span className="text-tertiary">005 /</span>
               <span>HYBRID VENUE & PHYSICAL LOCATION</span>
             </div>
@@ -35,12 +35,12 @@ export const LocationSection: React.FC = () => {
               WHERE HOPE BEGINS
             </h2>
 
-            <div className="space-y-2">
-              <div className="flex items-center gap-3 text-sunrise-brand font-mono font-bold text-lg">
+            <div className="space-y-2 flex flex-col items-center lg:items-start">
+              <div className="flex items-center justify-center lg:justify-start gap-3 text-sunrise-brand font-mono font-bold text-lg">
                 <MapPin className="w-5 h-5" />
                 <span>{EVENT_CONFIG.venueName}</span>
               </div>
-              <p className="text-sm font-mono text-dimwhite leading-relaxed pl-8">
+              <p className="text-sm font-mono text-dimwhite leading-relaxed pl-0 lg:pl-8">
                 {EVENT_CONFIG.venueFullAddress}
               </p>
             </div>

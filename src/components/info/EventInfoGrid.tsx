@@ -6,7 +6,7 @@ import { Calendar, MapPin, Monitor, Users, Trophy } from "lucide-react";
 
 export const EventInfoGrid: React.FC = () => {
   return (
-    <section className="relative py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="relative py-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
       {/* Asymmetric Technical Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Item 1: DATE (Span 4) */}

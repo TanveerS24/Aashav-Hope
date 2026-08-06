@@ -1,6 +1,6 @@
-# AASHAV — HOPE | Hackathon 2026
+# AASHAV — THE HOPE | Hackathon 2026
 
-Production-quality national-level hybrid hackathon website for **AASHAV — HOPE** taking place on **22 August 2026** at **SIMATS School of Engineering**.
+Production-quality national-level inter-college hybrid hackathon website for **AASHAV — THE HOPE** taking place on **22 August 2026** at **SIMATS School of Engineering**.
 
 Aashav is designed as an industry-oriented hackathon experience and warm-up for **Smart India Hackathon (SIH) 2026**.
 

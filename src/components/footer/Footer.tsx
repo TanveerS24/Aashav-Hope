@@ -6,22 +6,22 @@ import { ArrowUpRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="relative border-t border-surface-border bg-background pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <footer className="relative border-t border-surface-border bg-background pt-16 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden">
       <div className="flex flex-col gap-12">
         {/* Top Footer Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center text-center md:items-end md:text-left justify-between gap-8">
           <div>
             <div className="font-display font-black text-6xl sm:text-8xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-r from-offwhite via-offwhite to-dimwhite tracking-tight uppercase leading-none">
               AASHAV
             </div>
             <div className="font-display font-black text-2xl sm:text-4xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-sunrise-brand via-cyan-brand to-violet-brand uppercase mt-1">
-              HOPE / 2026
+              THE HOPE / 2026
             </div>
           </div>
 
-          <div className="flex flex-col items-start md:items-end font-mono text-xs text-dimwhite gap-2">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right font-mono text-xs text-dimwhite gap-2">
             <span className="text-offwhite font-bold">{EVENT_CONFIG.venueName}</span>
-            <span>22.08.2026 • HYBRID HACKATHON</span>
+            <span>22.08.2026 • INTER-COLLEGE HYBRID HACKATHON</span>
             <span className="text-cyan-brand">OFFICIAL SIH 2026 PREPARATION</span>
           </div>
         </div>

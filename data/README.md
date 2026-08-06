@@ -1,6 +1,6 @@
 # Problem Statements Data Format
 
-The problem statements for **AASHAV — HOPE** are managed via `/data/problem-statements.txt`.
+The problem statements for **AASHAV — THE HOPE** are managed via `/data/problem-statements.txt`.
 
 ## File Format Specification
 

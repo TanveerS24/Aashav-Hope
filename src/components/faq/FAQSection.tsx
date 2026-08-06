@@ -13,7 +13,7 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <section id="faq" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1400px] w-full mx-auto">
       {/* Header */}
       <div className="flex flex-col items-center text-center gap-4 mb-16">
         <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">

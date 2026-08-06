@@ -39,12 +39,12 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
       <div className="relative rounded-lg bg-surface/90 border border-surface-border p-8 sm:p-12 overflow-hidden backdrop-blur-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Header Info (Span 7) */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
+          <div className="lg:col-span-7 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
               <span className="text-tertiary">008 /</span>
               <span>DIRECT INQUIRIES & SUPPORT</span>
             </div>

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export const WinnersSection: React.FC = () => {
   return (
-    <section id="winners" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <section id="winners" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden">
       {/* Background Ambient Glow */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-sunrise-brand/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -37,8 +37,8 @@ export const WinnersSection: React.FC = () => {
           </div>
 
           {/* Editorial Content (Span 7) */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs text-sunrise-brand tracking-widest uppercase">
+          <div className="lg:col-span-7 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-sunrise-brand tracking-widest uppercase">
               <span className="text-tertiary">006 /</span>
               <span>RECOGNITION & HONORS</span>
             </div>

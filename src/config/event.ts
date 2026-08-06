@@ -33,9 +33,9 @@ export interface EventConfig {
 
 export const EVENT_CONFIG: EventConfig = {
   eventName: "AASHAV",
-  eventMeaning: "HOPE",
+  eventMeaning: "THE HOPE",
   tagline: "Build what tomorrow needs.",
-  subTagline: "The definitive SIH 2026 warm-up hackathon at SIMATS School of Engineering.",
+  subTagline: "The definitive SIH 2026 warm-up inter-college hackathon at SIMATS School of Engineering.",
   eventDateDisplay: "22 AUGUST 2026",
   countdownTargetISO: "2026-08-22T09:00:00+05:30", // 22 Aug 2026 09:00 AM IST
   timezone: "Asia/Kolkata",

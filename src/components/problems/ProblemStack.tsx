@@ -93,11 +93,11 @@ export const ProblemStack: React.FC<ProblemStackProps> = ({ problems }) => {
   return (
     <section
       id="problems"
-      className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden"
+      className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden"
     >
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div>
+      <div className="flex flex-col md:flex-row items-center text-center md:items-end md:text-left justify-between gap-6 mb-12">
+        <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase mb-2">
             <span className="text-tertiary">003 /</span>
             <span>TECHNICAL DOSSIER & PROBLEM STATEMENTS</span>
@@ -111,7 +111,7 @@ export const ProblemStack: React.FC<ProblemStackProps> = ({ problems }) => {
         </div>
 
         {/* Play/Pause & Counter Controls */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-center md:justify-end gap-4">
           <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-surface/80 border border-surface-border text-xs font-mono text-dimwhite">
             <span className="text-cyan-brand font-bold">
               {String(currentIndex + 1).padStart(2, "0")}

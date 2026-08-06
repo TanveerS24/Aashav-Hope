@@ -5,12 +5,13 @@ import { CustomCursor } from "@/components/ui/CustomCursor";
 import { BackgroundHorizon } from "@/components/ui/BackgroundHorizon";
 
 export const metadata: Metadata = {
-  title: "Aashav — Hope | Hackathon 2026 | SIMATS School of Engineering",
+  title: "Aashav — The hope | Hackathon 2026 | SIMATS School of Engineering",
   description:
-    "Aashav — Hope is a national-level hybrid hackathon at SIMATS School of Engineering designed to challenge students with previous SIH-style problem statements and prepare teams for SIH 2026.",
+    "Aashav — The hope is a national-level inter-college hybrid hackathon at SIMATS School of Engineering designed to challenge students with previous SIH-style problem statements and prepare teams for SIH 2026.",
   keywords: [
     "Aashav",
-    "Hope",
+    "The hope",
+    "Inter-College Hackathon",
     "Hackathon 2026",
     "SIMATS",
     "SIMATS School of Engineering",
@@ -22,18 +23,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Aashav Hackathon Team" }],
   openGraph: {
-    title: "Aashav — Hope | Hackathon 2026",
+    title: "Aashav — The hope | Hackathon 2026",
     description:
-      "Build what tomorrow needs. The definitive SIH 2026 warm-up hybrid hackathon at SIMATS School of Engineering on 22 August 2026.",
+      "Build what tomorrow needs. The definitive SIH 2026 warm-up inter-college hybrid hackathon at SIMATS School of Engineering on 22 August 2026.",
     url: "https://aashav2026.com",
-    siteName: "Aashav — Hope",
+    siteName: "Aashav — The hope",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aashav — Hope | Hackathon 2026",
+    title: "Aashav — The hope | Hackathon 2026",
     description:
-      "Build what tomorrow needs. Official SIH 2026 preparation warm-up hackathon at SIMATS School of Engineering.",
+      "Build what tomorrow needs. Official SIH 2026 preparation warm-up inter-college hackathon at SIMATS School of Engineering.",
   },
 };
 

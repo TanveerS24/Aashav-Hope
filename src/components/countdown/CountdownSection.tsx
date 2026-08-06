@@ -62,7 +62,7 @@ export const CountdownSection: React.FC = () => {
   }
 
   return (
-    <section id="countdown" className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="countdown" className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
       {/* Container Card with Technical Cyber Grid Border */}
       <div className="relative rounded-lg bg-surface/90 border border-surface-border p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-xl overflow-hidden">
         {/* Glow Accent inside */}
@@ -70,7 +70,7 @@ export const CountdownSection: React.FC = () => {
         <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-sunrise-brand/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Section Header bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border/60 pb-6 mb-8">
+        <div className="flex flex-wrap items-center justify-center sm:justify-between gap-4 border-b border-surface-border/60 pb-6 mb-8 text-center sm:text-left">
           <div className="flex items-center gap-3">
             <div className="p-2 rounded bg-cyan-brand/10 text-cyan-brand border border-cyan-brand/30">
               <Radio className="w-5 h-5 animate-pulse" />

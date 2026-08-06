@@ -40,9 +40,9 @@ const PILLARS = [
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
       {/* Editorial Header */}
-      <div className="flex flex-col items-start gap-4">
+      <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-4">
         <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
           <span className="text-tertiary">002 /</span>
           <span>MISSION & PHILOSOPHY</span>
@@ -73,7 +73,7 @@ export const AboutSection: React.FC = () => {
         {/* Left Editorial Narrative */}
         <div className="lg:col-span-7 space-y-6 text-dimwhite font-sans leading-relaxed text-base sm:text-lg">
           <p>
-            <strong className="text-offwhite font-semibold">Aashav (Meaning &quot;Hope&quot;)</strong> was conceived to solve a systemic gap in traditional student hackathons: the reliance on generic surface-level prototypes.
+            <strong className="text-offwhite font-semibold">Aashav (Meaning &quot;The hope&quot;)</strong> was conceived to solve a systemic gap in traditional student hackathons: the reliance on generic surface-level prototypes.
           </p>
           <p>
             By leveraging authentic previous-year <strong className="text-cyan-brand font-mono font-normal">Smart India Hackathon (SIH)</strong> problem statements, Aashav provides student teams with an invaluable opportunity to understand complex problem statements, construct resilient system architectures, and deliver pitch-ready technical implementations.
