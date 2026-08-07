@@ -26,7 +26,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
       {
         time: "07 AUG 2026",
         title: "Registration Opens",
-        description: "Official portal opens for 3–4 member student team registrations.",
+        description: "Official portal opens for solo participants and 1–4 member team registrations.",
         badge: "START",
       },
       {
@@ -70,6 +70,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
       {
         time: "08:30 AM",
         title: "Inauguration",
+        badge: "Address the crowd",
         description: "Opening keynote, briefing on problem constraints, and mentor allocation.",
       },
       {
@@ -82,6 +83,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
       {
         time: "12:30 PM",
         title: "First Round Evaluation",
+        badge: "Evaluvation",
         description: "Mid-way progress checkpoint & architectural review by industry judges.",
       },
       {

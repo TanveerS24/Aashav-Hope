@@ -30,8 +30,8 @@ export const ContactSection: React.FC = () => {
           {/* Header Info (Span 5) */}
           <div className="lg:col-span-5 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
-              <span className="text-tertiary">008 /</span>
-              <span>DIRECT INQUIRIES & SUPPORT</span>
+              <span className="text-tertiary">009 /</span>
+              <span>DIRECT INQUIRIES &amp; SUPPORT</span>
             </div>
 
             <h2 className="font-display font-black text-4xl sm:text-6xl text-offwhite tracking-tight uppercase">
@@ -43,7 +43,7 @@ export const ContactSection: React.FC = () => {
             </p>
 
             <p className="text-xs font-mono text-dimwhite leading-relaxed max-w-lg">
-              Have questions regarding registration eligibility, hybrid participation, problem statements, or venue logistics? Reach out directly to our Head Coordinator or Faculty Coordinator.
+              Have questions regarding registration eligibility, hybrid participation, problem statements, or venue? Reach out directly to our Head Coordinator or Faculty Coordinator.
             </p>
           </div>
 
@@ -63,11 +63,10 @@ export const ContactSection: React.FC = () => {
                     <div className="flex items-center justify-between border-b border-surface-border pb-4 mb-6">
                       <div className="flex items-center gap-3">
                         <div
-                          className={`h-10 w-10 rounded border flex items-center justify-center ${
-                            isFaculty
+                          className={`h-10 w-10 rounded border flex items-center justify-center ${isFaculty
                               ? "bg-sunrise-brand/10 border-sunrise-brand/30 text-sunrise-brand"
                               : "bg-cyan-brand/10 border-cyan-brand/30 text-cyan-brand"
-                          }`}
+                            }`}
                         >
                           {isFaculty ? (
                             <ShieldCheck className="w-5 h-5" />
@@ -77,9 +76,8 @@ export const ContactSection: React.FC = () => {
                         </div>
                         <div>
                           <span
-                            className={`text-[10px] font-mono tracking-widest uppercase block ${
-                              isFaculty ? "text-sunrise-brand" : "text-cyan-brand"
-                            }`}
+                            className={`text-[10px] font-mono tracking-widest uppercase block ${isFaculty ? "text-sunrise-brand" : "text-cyan-brand"
+                              }`}
                           >
                             {c.role}
                           </span>
@@ -94,26 +92,26 @@ export const ContactSection: React.FC = () => {
                     <div className="space-y-3">
                       <button
                         onClick={() => handleEmail(c.email)}
-                        className="w-full py-3 px-4 rounded bg-surface hover:bg-surface-border border border-surface-border hover:border-cyan-brand text-offwhite font-mono text-xs tracking-wider uppercase flex items-center justify-between transition-colors"
+                        className="w-full py-3 px-4 rounded bg-surface hover:bg-surface-border border border-surface-border hover:border-cyan-brand text-offwhite font-mono text-xs tracking-wider uppercase flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 transition-colors"
                       >
-                        <span className="flex items-center gap-2">
+                        <span className="flex items-center gap-2 shrink-0">
                           <Mail className="w-4 h-4 text-cyan-brand" />
                           <span>EMAIL</span>
                         </span>
-                        <span className="text-[10px] text-dimwhite truncate max-w-[140px]">
-                          {isEmailValid ? c.email : "[CONFIGURED]"}
+                        <span className="text-[10px] sm:text-xs text-dimwhite break-all text-right lowercase font-mono">
+                          {isEmailValid ? c.email : "[configured]"}
                         </span>
                       </button>
 
                       <button
                         onClick={() => handlePhone(c.phone)}
-                        className="w-full py-3 px-4 rounded bg-surface hover:bg-surface-border border border-surface-border hover:border-cyan-brand text-offwhite font-mono text-xs tracking-wider uppercase flex items-center justify-between transition-colors"
+                        className="w-full py-3 px-4 rounded bg-surface hover:bg-surface-border border border-surface-border hover:border-cyan-brand text-offwhite font-mono text-xs tracking-wider uppercase flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 transition-colors"
                       >
-                        <span className="flex items-center gap-2">
+                        <span className="flex items-center gap-2 shrink-0">
                           <Phone className="w-4 h-4 text-sunrise-brand" />
                           <span>CALL DIRECT</span>
                         </span>
-                        <span className="text-[10px] text-dimwhite">
+                        <span className="text-[10px] sm:text-xs text-dimwhite shrink-0">
                           {isPhoneValid ? c.phone : "[CONFIGURED]"}
                         </span>
                       </button>
@@ -121,7 +119,7 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-surface-border/40 text-[10px] font-mono text-tertiary text-center">
-                    SIMATS SCHOOL OF ENGINEERING
+                    SIMATS SCHOOL OF ENGINEERING • DEPARTMENT OF MACHINE LEARNING
                   </div>
                 </div>
               );

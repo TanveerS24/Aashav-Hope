@@ -25,7 +25,7 @@ export const TimelineSection: React.FC = () => {
       {/* Section Header (Filter & Scroll Buttons Removed) */}
       <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 mb-12">
         <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
-          <span className="text-tertiary">004 /</span>
+          <span className="text-tertiary">005 /</span>
           <span>HORIZONTAL MISSION ROADMAP</span>
         </div>
 
@@ -100,7 +100,6 @@ export const TimelineSection: React.FC = () => {
 
                         <div className="pt-2 border-t border-surface-border/40 text-[10px] font-mono text-tertiary flex items-center justify-between">
                           <span>PHASE {evt.phaseId}</span>
-                          <span className="text-cyan-brand">ABOVE AXIS</span>
                         </div>
                       </motion.div>
 
@@ -194,7 +193,6 @@ export const TimelineSection: React.FC = () => {
 
                         <div className="pt-2 border-t border-surface-border/40 text-[10px] font-mono text-tertiary flex items-center justify-between">
                           <span>PHASE {evt.phaseId}</span>
-                          <span className="text-sunrise-brand">BELOW AXIS</span>
                         </div>
                       </motion.div>
                     </div>

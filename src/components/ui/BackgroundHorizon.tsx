@@ -21,7 +21,7 @@ export const BackgroundHorizon: React.FC = () => {
       <div className="hidden lg:flex justify-between items-center absolute top-24 left-8 right-8 text-[10px] font-mono text-cyan-brand/30 tracking-widest select-none">
         <span>LOC: 13.0298° N, 79.9723° E</span>
         <span className="animate-beacon">● SIGNAL STATUS: ACTIVE</span>
-        <span>SYS.REF: AASHAV_2026_SIH_WARMUP</span>
+        <span>SYS.REF: AASHAV_2026_NATIONAL</span>
       </div>
 
       {/* 6. Subtle Noise / Vignette */}

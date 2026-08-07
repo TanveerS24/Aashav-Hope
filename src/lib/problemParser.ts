@@ -1,134 +1,205 @@
 import fs from "fs";
 import path from "path";
-import { ProblemStatement } from "@/types";
+import { ProblemStatement, CategorizedProblems } from "@/types";
 
-export const FALLBACK_PROBLEMS: ProblemStatement[] = [
+export const FALLBACK_SOFTWARE_PROBLEMS: ProblemStatement[] = [
   {
-    id: "01",
-    title: "AI-POWERED PUBLIC SERVICE ASSISTANT",
-    domain: "AI & Public Services",
-    source: "SIH Previous Year",
-    complexity: "Advanced",
+    id: "SW-01",
+    title: "SMART TOURIST SAFETY MONITORING & INCIDENT RESPONSE SYSTEM USING AI AND GEO-FENCING",
+    domain: "Smart Cities & Public Safety",
     category: "Software",
+    track: "software",
     description:
-      "Develop a multi-lingual, voice-enabled AI assistant for rural citizens to navigate government welfare schemes, check eligibility, and generate verified application documents offline or with low connectivity.",
+      "Develop an AI-powered tourist safety platform integrating real-time geo-fencing, emergency incident detection, live location sharing, and automated alert mechanisms to enhance traveler safety and enable rapid emergency response.",
   },
   {
-    id: "02",
-    title: "SMART URBAN WATER MONITORING & LEAK DETECTOR",
-    domain: "IoT & Smart Cities",
-    source: "SIH Previous Year",
-    complexity: "Medium",
-    category: "Hardware / Software",
+    id: "SW-02",
+    title: "AI-POWERED PRECISE TRAIN TRAFFIC CONTROL SYSTEM",
+    domain: "Transportation & Intelligent Mobility",
+    category: "Software",
+    track: "software",
     description:
-      "Design an IoT sensor network integrated with spatial graph analytics to detect non-revenue water loss, pipe corrosion, and pressure anomalies across municipal distribution grids in real time.",
+      "Design an AI-driven railway traffic management system utilizing predictive scheduling, real-time train tracking, conflict detection, and route optimization algorithms to maximize section throughput while improving operational safety and efficiency.",
   },
   {
-    id: "03",
-    title: "INTELLIGENT SOLID WASTE MANAGEMENT & ROUTE OPTIMIZATION",
-    domain: "Sustainability & Clean Tech",
-    source: "SIH Previous Year",
-    complexity: "Advanced",
-    category: "Software / Analytics",
+    id: "SW-03",
+    title: "SUPPLY CHAIN TRANSPARENCY FOR AGRICULTURAL PRODUCE",
+    domain: "Agriculture & Supply Chain Management",
+    category: "Software",
+    track: "software",
     description:
-      "Construct a dynamic waste bin fill-level analytics engine with dynamic vehicle routing algorithms to minimize fuel consumption and prevent overflow in high-density urban zones.",
+      "Build a digital agricultural supply chain platform incorporating blockchain-based traceability, real-time logistics tracking, quality verification, and stakeholder transparency to ensure authenticity and improve farm-to-market visibility.",
   },
   {
-    id: "04",
-    title: "ACCESSIBLE DIGITAL EDUCATION PLATFORM FOR DIFFERENLY ABLED",
-    domain: "EdTech & Accessibility",
-    source: "SIH Previous Year",
-    complexity: "High",
-    category: "Software / Web Accessibility",
+    id: "SW-04",
+    title: "DIGITAL HERITAGE PRESERVATION AND TOURISM PLATFORM",
+    domain: "Tourism, Culture & Smart Cities",
+    category: "Software",
+    track: "software",
     description:
-      "Build an adaptive learning interface complying with WCAG 2.1 AAA guidelines, supporting real-time sign language translation, haptic feedback integration, and eye-gaze control for disabled learners.",
+      "Develop an interactive digital platform that showcases heritage sites through virtual tours, 3D visualization, geolocation services, and historical content to promote tourism while preserving cultural heritage.",
   },
   {
-    id: "05",
-    title: "SMART AGRICULTURE DECISION SUPPORT SYSTEM",
-    domain: "AgriTech & Climate Risk",
-    source: "SIH Previous Year",
-    complexity: "Advanced",
-    category: "AI / GIS",
+    id: "SW-05",
+    title: "AI-POWERED MOBILE PLATFORM FOR SPORTS TALENT ASSESSMENT",
+    domain: "Sports Technology & Artificial Intelligence",
+    category: "Software",
+    track: "software",
     description:
-      "Engineered precision farming platform pairing satellite imagery with hyper-local microclimate sensors to deliver AI crop advisory, pest outbreak forecasting, and direct market price intelligence.",
+      "Engineer a mobile application leveraging AI-based video analysis, performance metrics, motion tracking, and skill evaluation to provide accessible and unbiased sports talent identification and athlete development.",
   },
   {
-    id: "06",
-    title: "DISASTER RESPONSE COORDINATION & MESH COMMUNICATION",
-    domain: "Disaster Management",
-    source: "SIH Previous Year",
-    complexity: "High",
-    category: "Networking / Mobile",
+    id: "SW-06",
+    title: "REAL-TIME HOSPITAL BED AND ICU AVAILABILITY SYSTEM",
+    domain: "Healthcare & Digital Health",
+    category: "Software",
+    track: "software",
     description:
-      "Create a zero-infrastructure peer-to-peer mesh networking mobile platform for search-and-rescue teams during floods and earthquakes to broadcast SOS distress signals without cellular service.",
+      "Develop a centralized healthcare management platform that aggregates real-time hospital bed, ICU, ventilator, and emergency resource availability, enabling faster patient referrals and optimized healthcare coordination.",
   },
   {
-    id: "07",
-    title: "PUBLIC TRANSPORT FLEET & PASSENGER LOAD OPTIMIZATION",
-    domain: "Mobility & Smart Transport",
-    source: "SIH Previous Year",
-    complexity: "Medium",
-    category: "Software / Data Science",
+    id: "SW-07",
+    title: "SMART MEDICINE REMINDER AND ADHERENCE TRACKER",
+    domain: "Healthcare & Patient Care",
+    category: "Software",
+    track: "software",
     description:
-      "Deploy a real-time computer vision system on city buses to calculate passenger density, dynamic arrival estimations, and automated route adjustments during peak transit traffic hours.",
+      "Build an intelligent medication management application featuring personalized reminders, adherence tracking, dosage history, caregiver notifications, and AI-driven insights to improve patient compliance and treatment outcomes.",
   },
   {
-    id: "08",
-    title: "OPEN INNOVATION — REAL WORLD INDUSTRY CHALLENGE",
-    domain: "Cross-Disciplinary Innovation",
-    source: "SIH Previous Year",
-    complexity: "Open",
-    category: "Hardware / Software",
+    id: "SW-08",
+    title: "DISASTER PREPAREDNESS AND RESPONSE SYSTEM",
+    domain: "Disaster Management & Emergency Response",
+    category: "Software",
+    track: "software",
     description:
-      "Propose and build a breakthrough technical solution addressing a critical unserved bottleneck in healthcare, renewable energy, cybersecurity, or logistics following SIH industry standards.",
+      "Develop an intelligent disaster preparedness and response platform integrating real-time hazard monitoring, AI-based risk prediction, evacuation planning, resource coordination, and emergency communication to enhance public safety and enable rapid disaster response.",
   },
 ];
 
-export function getProblemStatements(): ProblemStatement[] {
+export const FALLBACK_HARDWARE_PROBLEMS: ProblemStatement[] = [
+  {
+    id: "HW-01",
+    title: "ECHOLOCATE — INDOOR NAVIGATION FOR THE VISUALLY IMPAIRED USING ULTRASONIC MESH",
+    domain: "Assistive Technology",
+    category: "Hardware + Software",
+    track: "hardware",
+    description:
+      "Develop a wearable indoor navigation system integrating ultrasonic ranging sensors, inertial motion tracking, and haptic feedback actuators to assist visually impaired users in safely navigating complex indoor environments without GPS or beacon-based infrastructure.",
+  },
+  {
+    id: "HW-02",
+    title: "SMART HELMET FOR MINE WORKER SAFETY MONITORING",
+    domain: "Industrial Safety & Wearables",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Engineer a rugged smart safety helmet featuring multi-gas sensors, temperature monitoring, impact detection, and wireless telemetry to continuously monitor underground mine conditions and instantly alert control centers during hazardous incidents.",
+  },
+  {
+    id: "HW-03",
+    title: "AUTONOMOUS RAILWAY TRACK CRACK DETECTION ROBOT",
+    domain: "Transportation & Robotics",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Construct an autonomous rail-mounted inspection robot equipped with ultrasonic flaw detection, vibration sensing, computer vision cameras, and GPS-enabled reporting to identify railway track cracks, misalignments, and structural defects for predictive maintenance.",
+  },
+  {
+    id: "HW-04",
+    title: "STRUCTURAL HEALTH MONITORING SYSTEM FOR BRIDGES",
+    domain: "Civil Infrastructure & IoT",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Design a distributed structural health monitoring network incorporating strain gauges, vibration sensors, and wireless IoT communication to continuously assess bridge integrity and provide early warnings of structural stress, fatigue, and potential failure.",
+  },
+  {
+    id: "HW-05",
+    title: "AUTOMATED HYDROPONIC NUTRIENT DOSING SYSTEM",
+    domain: "Agriculture & Automation",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Develop an automated hydroponic nutrient management system integrating pH, electrical conductivity (EC), and water-level sensors with precision dosing pumps to maintain optimal nutrient balance and maximize crop growth without manual intervention.",
+  },
+  {
+    id: "HW-06",
+    title: "EARTHQUAKE STABILIZED SYSTEM",
+    domain: "Disaster Management & Structural Safety",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Build an active earthquake stabilization platform utilizing multi-axis accelerometers, gyroscopes, and real-time motion control actuators to minimize structural vibrations and improve stability during seismic disturbances.",
+  },
+  {
+    id: "HW-07",
+    title: "DETECTION AND PREVENTION OF TAMPERING IN WEIGHING AND MEASURING INSTRUMENTS",
+    domain: "Industrial Automation & Legal Metrology",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Engineer an intelligent tamper detection system for weighing and measuring instruments using load-cell anomaly analysis, enclosure tamper sensors, secure data logging, and wireless alerts to prevent unauthorized calibration and measurement fraud.",
+  },
+  {
+    id: "HW-08",
+    title: "INTELLIGENT PESTICIDE SPRINKLING SYSTEM",
+    domain: "Agriculture, FoodTech & Rural Development",
+    category: "Hardware",
+    track: "hardware",
+    description:
+      "Develop a low-cost intelligent pesticide sprinkling system integrating computer vision, HSV color thresholding, and precision spray actuators to detect plant leaf infection severity and automatically apply proportional pesticide dosage while minimizing chemical overuse without requiring machine learning models.",
+  },
+];
+
+function parseProblemJson(filePath: string, track: "software" | "hardware"): ProblemStatement[] {
   try {
-    const filePath = path.join(process.cwd(), "data", "problem-statements.txt");
-    if (!fs.existsSync(filePath)) {
-      return FALLBACK_PROBLEMS;
-    }
+    if (!fs.existsSync(filePath)) return [];
 
     const rawContent = fs.readFileSync(filePath, "utf-8");
-    const blocks = rawContent.split("---").filter((b) => b.trim().length > 0);
+    const jsonList = JSON.parse(rawContent);
 
-    const parsed: ProblemStatement[] = [];
+    if (!Array.isArray(jsonList)) return [];
 
-    for (let i = 0; i < blocks.length; i += 2) {
-      const metadataChunk = blocks[i];
-      const descriptionChunk = blocks[i + 1];
+    return jsonList.map((item: any, idx: number) => {
+      const numericId = item.id || idx + 1;
+      const formattedId = track === "software"
+        ? `SW-${String(numericId).padStart(2, "0")}`
+        : `HW-${String(numericId).padStart(2, "0")}`;
 
-      if (!metadataChunk || !descriptionChunk) continue;
-
-      const metaLines = metadataChunk.trim().split("\n");
-      const meta: Record<string, string> = {};
-
-      for (const line of metaLines) {
-        const colonIdx = line.indexOf(":");
-        if (colonIdx !== -1) {
-          const key = line.slice(0, colonIdx).trim().toLowerCase();
-          const val = line.slice(colonIdx + 1).trim();
-          meta[key] = val;
-        }
-      }
-
-      parsed.push({
-        id: meta["id"] || `0${parsed.length + 1}`,
-        title: meta["title"] || "UNTITLED PROBLEM STATEMENT",
-        domain: meta["domain"] || "General Engineering",
-        source: meta["source"] || "SIH Previous Year",
-        complexity: meta["complexity"] || "Standard",
-        category: meta["category"] || "Software",
-        description: descriptionChunk.trim(),
-      });
-    }
-
-    return parsed.length > 0 ? parsed : FALLBACK_PROBLEMS;
-  } catch (error) {
-    console.error("Error reading problem-statements.txt:", error);
-    return FALLBACK_PROBLEMS;
+      return {
+        id: formattedId,
+        title: (item.title || "UNTITLED PROBLEM STATEMENT").toUpperCase(),
+        domain: item.domain || "General Engineering",
+        category: item.category || (track === "software" ? "Software" : "Hardware"),
+        description: item.description || "",
+        track,
+      };
+    });
+  } catch (err) {
+    console.error(`Error reading JSON ${filePath}:`, err);
+    return [];
   }
+}
+
+export function getCategorizedProblemStatements(): CategorizedProblems {
+  const baseDir = process.cwd();
+  
+  // JSON Paths in data/problems/
+  const swJsonPath = path.join(baseDir, "data", "problems", "sw-statements.json");
+  const hwJsonPath = path.join(baseDir, "data", "problems", "hw-statements.json");
+
+  let software = parseProblemJson(swJsonPath, "software");
+  let hardware = parseProblemJson(hwJsonPath, "hardware");
+
+  return {
+    software: software.length > 0 ? software : FALLBACK_SOFTWARE_PROBLEMS,
+    hardware: hardware.length > 0 ? hardware : FALLBACK_HARDWARE_PROBLEMS,
+  };
+}
+
+// For backwards compatibility
+export function getProblemStatements(): ProblemStatement[] {
+  const cat = getCategorizedProblemStatements();
+  return [...cat.software, ...cat.hardware];
 }

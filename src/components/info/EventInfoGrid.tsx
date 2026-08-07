@@ -7,6 +7,11 @@ import { Calendar, MapPin, Monitor, Users, Trophy } from "lucide-react";
 export const EventInfoGrid: React.FC = () => {
   return (
     <section className="relative py-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto">
+      <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase mb-6">
+        <span className="text-tertiary">003 /</span>
+        <span>AT A GLANCE SPECIFICATIONS</span>
+      </div>
+
       {/* Asymmetric Technical Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* Item 1: DATE (Span 4) */}
@@ -54,16 +59,16 @@ export const EventInfoGrid: React.FC = () => {
         <div className="md:col-span-4 rounded-sm bg-surface/90 border border-surface-border p-6 flex flex-col justify-between relative overflow-hidden group hover:border-cyan-brand/40 transition-colors">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono text-cyan-brand tracking-widest uppercase">
-              SPEC 03 // PARTICIPATION MODE
+              SPEC 03 // PARTICIPATION TRACKS
             </span>
             <Monitor className="w-4 h-4 text-dimwhite group-hover:text-cyan-brand transition-colors" />
           </div>
           <div className="mt-8">
             <div className="font-display font-black text-2xl sm:text-3xl text-offwhite tracking-tight">
-              ONLINE + OFFLINE
+              SOFTWARE + HARDWARE
             </div>
             <div className="text-xs font-mono text-dimwhite mt-1">
-              ON-CAMPUS LABS OR REMOTE DISCORD ARENAS
+              BOTH TRACKS FULLY SUPPORTED
             </div>
           </div>
         </div>
@@ -78,10 +83,10 @@ export const EventInfoGrid: React.FC = () => {
           </div>
           <div className="mt-8">
             <div className="font-display font-black text-3xl sm:text-4xl text-offwhite tracking-tight">
-              3–4 MEMBERS
+              1–4 MEMBERS
             </div>
             <div className="text-xs font-mono text-dimwhite mt-1">
-              PER TEAM • MULTIDISCIPLINARY ALLOWED
+              SOLO OR TEAMS UP TO 4 ALLOWED
             </div>
           </div>
         </div>

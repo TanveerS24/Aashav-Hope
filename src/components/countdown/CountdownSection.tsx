@@ -1,53 +1,18 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { EVENT_CONFIG } from "@/config/event";
+import { useCountdown } from "@/hooks/useCountdown";
 import { Clock, ShieldAlert, Radio } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-  isLive: boolean;
-}
-
 export const CountdownSection: React.FC = () => {
-  const targetTime = useMemo(
-    () => new Date(EVENT_CONFIG.countdownTargetISO).getTime(),
-    []
-  );
-
-  const calculateTimeLeft = useCallback((): TimeLeft => {
-    const now = new Date().getTime();
-    const difference = targetTime - now;
-
-    if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, isLive: true };
-    }
-
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    return { days, hours, minutes, seconds, isLive: false };
-  }, [targetTime]);
-
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+  const timeLeft = useCountdown(EVENT_CONFIG.countdownTargetISO);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [calculateTimeLeft]);
+  }, []);
 
   const pad = (num: number) => num.toString().padStart(2, "0");
 
@@ -76,8 +41,9 @@ export const CountdownSection: React.FC = () => {
               <Radio className="w-5 h-5 animate-pulse" />
             </div>
             <div>
-              <span className="text-[10px] font-mono text-dimwhite tracking-widest uppercase block">
-                MISSION LAUNCH TIMING • {EVENT_CONFIG.timezone}
+              <span className="text-[10px] font-mono text-cyan-brand tracking-widest uppercase flex items-center gap-1.5 mb-0.5">
+                <span className="text-tertiary">002 /</span>
+                <span>MISSION LAUNCH TIMING • {EVENT_CONFIG.timezone}</span>
               </span>
               <h2 className="font-mono font-bold text-lg text-offwhite tracking-wider">
                 {timeLeft.isLive ? (
@@ -206,7 +172,7 @@ export const CountdownSection: React.FC = () => {
             <Clock className="w-3.5 h-3.5 text-cyan-brand" />
             SYNCHRONIZED WITH IST (UTC+5:30)
           </span>
-          <span>HYBRID FORMAT — SIMATS CAMPUS & ONLINE</span>
+          <span>Just as excited as you are</span>
         </div>
       </div>
     </section>

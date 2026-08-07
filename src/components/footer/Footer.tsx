@@ -19,86 +19,31 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center md:items-end text-center md:text-right font-mono text-xs text-dimwhite gap-2">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right font-mono text-xs text-dimwhite gap-3">
+            <button
+              onClick={() => {
+                if (EVENT_CONFIG.registrationUrl.includes("PLACEHOLDER")) {
+                  alert("Registration URL is configured as a placeholder.");
+                } else {
+                  window.open(EVENT_CONFIG.registrationUrl, "_blank", "noopener,noreferrer");
+                }
+              }}
+              className="px-6 py-3 rounded bg-gradient-to-r from-cyan-brand via-cyan-dim to-violet-brand text-background font-mono font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.25)] hover:shadow-[0_0_35px_rgba(0,240,255,0.45)] hover:scale-105 active:scale-95 transition-all group mb-1"
+            >
+              <span>REGISTER NOW</span>
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
             <span className="text-offwhite font-bold">{EVENT_CONFIG.venueName}</span>
+            <span className="text-cyan-brand font-semibold text-[11px] uppercase tracking-wider">{EVENT_CONFIG.departmentName}</span>
             <span>22.08.2026 • INTER-COLLEGE HYBRID HACKATHON</span>
-            <span className="text-cyan-brand">OFFICIAL SIH 2026 PREPARATION</span>
-          </div>
-        </div>
-
-        {/* Quick Links & Info */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-8 border-y border-surface-border/60 font-mono text-xs">
-          <div>
-            <span className="text-cyan-brand font-bold uppercase tracking-wider block mb-3">
-              NAVIGATION
-            </span>
-            <ul className="space-y-2 text-dimwhite">
-              <li>
-                <a href="#home" className="hover:text-offwhite transition-colors">
-                  HOME
-                </a>
-              </li>
-              <li>
-                <a href="#problems" className="hover:text-offwhite transition-colors">
-                  PROBLEM STATEMENTS
-                </a>
-              </li>
-              <li>
-                <a href="#timeline" className="hover:text-offwhite transition-colors">
-                  TIMELINE & ROADMAP
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-offwhite transition-colors">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <span className="text-cyan-brand font-bold uppercase tracking-wider block mb-3">
-              CRITICAL DATES
-            </span>
-            <ul className="space-y-2 text-dimwhite">
-              <li>REG OPENS: 07 AUG 2026</li>
-              <li>REG CLOSES: 20 AUG 2:00 PM</li>
-              <li>SELECTION: 21 AUG &lt;10 AM</li>
-              <li>EVENT DAY: 22 AUG 2026</li>
-            </ul>
-          </div>
-
-          <div>
-            <span className="text-cyan-brand font-bold uppercase tracking-wider block mb-3">
-              FORMAT & SPECS
-            </span>
-            <ul className="space-y-2 text-dimwhite">
-              <li>MODE: ONLINE + OFFLINE</li>
-              <li>TEAM: 3–4 MEMBERS</li>
-              <li>WINNERS: 5 TEAMS HONORED</li>
-              <li>VENUE: SIMATS CAMPUS</li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col justify-between">
-            <div>
-              <span className="text-sunrise-brand font-bold uppercase tracking-wider block mb-3">
-                STATEMENT
-              </span>
-              <p className="text-dimwhite leading-relaxed">
-                &quot;BUILT FOR THOSE WHO BUILD WHAT&apos;S NEXT.&quot;
-              </p>
-            </div>
-            <div className="mt-4 pt-4 border-t border-surface-border/40 text-[10px] text-tertiary">
-              AASHAV 2026 • SIMATS SCHOOL OF ENGINEERING
-            </div>
+            <span className="text-sunrise-brand">NATIONAL-GRADE HACKATHON 2026</span>
           </div>
         </div>
 
         {/* Bottom Legal / Copyright */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-tertiary">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-surface-border/60 font-mono text-[11px] text-tertiary">
           <span>© 2026 AASHAV HACKATHON. ALL RIGHTS RESERVED.</span>
-          <span>DESIGNED FOR NATIONAL TECHNICAL EXCELLENCE.</span>
+          <span>SIMATS SCHOOL OF ENGINEERING • DEPARTMENT OF MACHINE LEARNING</span>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export const FAQSection: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col items-center text-center gap-4 mb-16">
         <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
-          <span className="text-tertiary">007 /</span>
+          <span className="text-tertiary">010 /</span>
           <span>FREQUENTLY ASKED QUESTIONS</span>
         </div>
 

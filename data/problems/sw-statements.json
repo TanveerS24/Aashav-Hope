@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "Smart Tourist Safety Monitoring & Incident Response System using AI and Geo-Fencing",
+        "domain": "Smart Cities & Public Safety",
+        "category": "Software",
+        "description": "Develop an AI-powered tourist safety platform integrating real-time geo-fencing, emergency incident detection, live location sharing, and automated alert mechanisms to enhance traveler safety and enable rapid emergency response."
+    },
+    {
+        "id": 2,
+        "title": "AI-Powered Precise Train Traffic Control System",
+        "domain": "Transportation & Intelligent Mobility",
+        "category": "Software",
+        "description": "Design an AI-driven railway traffic management system utilizing predictive scheduling, real-time train tracking, conflict detection, and route optimization algorithms to maximize section throughput while improving operational safety and efficiency."
+    },
+    {
+        "id": 3,
+        "title": "Supply Chain Transparency for Agricultural Produce",
+        "domain": "Agriculture & Supply Chain Management",
+        "category": "Software",
+        "description": "Build a digital agricultural supply chain platform incorporating blockchain-based traceability, real-time logistics tracking, quality verification, and stakeholder transparency to ensure authenticity and improve farm-to-market visibility."
+    },
+    {
+        "id": 4,
+        "title": "Digital Heritage Preservation and Tourism Platform",
+        "domain": "Tourism, Culture & Smart Cities",
+        "category": "Software",
+        "description": "Develop an interactive digital platform that showcases heritage sites through virtual tours, 3D visualization, geolocation services, and historical content to promote tourism while preserving cultural heritage."
+    },
+    {
+        "id": 5,
+        "title": "AI-Powered Mobile Platform for Sports Talent Assessment",
+        "domain": "Sports Technology & Artificial Intelligence",
+        "category": "Software",
+        "description": "Engineer a mobile application leveraging AI-based video analysis, performance metrics, motion tracking, and skill evaluation to provide accessible and unbiased sports talent identification and athlete development."
+    },
+    {
+        "id": 6,
+        "title": "Real-Time Hospital Bed and ICU Availability System",
+        "domain": "Healthcare & Digital Health",
+        "category": "Software",
+        "description": "Develop a centralized healthcare management platform that aggregates real-time hospital bed, ICU, ventilator, and emergency resource availability, enabling faster patient referrals and optimized healthcare coordination."
+    },
+    {
+        "id": 7,
+        "title": "Smart Medicine Reminder and Adherence Tracker",
+        "domain": "Healthcare & Patient Care",
+        "category": "Software",
+        "description": "Build an intelligent medication management application featuring personalized reminders, adherence tracking, dosage history, caregiver notifications, and AI-driven insights to improve patient compliance and treatment outcomes."
+    },
+    {
+        "id": 8,
+        "title": "Disaster Preparedness and Response System",
+        "domain": "Disaster Management & Emergency Response",
+        "category": "Software",
+        "description": "Develop an intelligent disaster preparedness and response platform integrating real-time hazard monitoring, AI-based risk prediction, evacuation planning, resource coordination, and emergency communication to enhance public safety and enable rapid disaster response."
+    }
+]

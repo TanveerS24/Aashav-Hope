@@ -39,8 +39,8 @@ export const WinnersSection: React.FC = () => {
           {/* Editorial Content (Span 7) */}
           <div className="lg:col-span-7 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-sunrise-brand tracking-widest uppercase">
-              <span className="text-tertiary">006 /</span>
-              <span>RECOGNITION & HONORS</span>
+              <span className="text-tertiary">008 /</span>
+              <span>RECOGNITION &amp; HONORS</span>
             </div>
 
             <h2 className="font-display font-black text-4xl sm:text-6xl text-offwhite tracking-tight uppercase leading-tight">
@@ -48,31 +48,31 @@ export const WinnersSection: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg font-sans text-dimwhite leading-relaxed">
-              At the conclusion of the final evaluation on 22 August 2026, exactly <strong className="text-offwhite">5 teams</strong> will be recognized and formally honored at the <strong className="text-sunrise-brand">Valedictory Ceremony</strong> for outstanding technical innovation, system architecture, and solution presentation.
+              At the conclusion of the final evaluation on 22 August 2026, selected <strong className="text-offwhite">5 teams</strong> will be honored at the <strong className="text-sunrise-brand">Valedictory Ceremony</strong> and awarded official Winner Certificates with Medals. All participating teams will receive official Participation Certificates.
             </p>
 
             {/* Recognition Highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="p-4 rounded bg-card/80 border border-surface-border flex items-start gap-3">
+              <div className="p-4 rounded bg-card/80 border border-sunrise-brand/40 flex items-start gap-3">
                 <Trophy className="w-5 h-5 text-sunrise-brand flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-mono font-bold text-xs text-offwhite uppercase">
-                    NATIONAL-LEVEL EXPOSURE
+                  <h4 className="font-mono font-bold text-xs text-sunrise-brand uppercase">
+                    WINNERS: MEDALS &amp; CERTIFICATES
                   </h4>
                   <p className="text-[11px] font-mono text-dimwhite mt-1">
-                    Demonstrate your technical prowess before jury panels ahead of SIH 2026.
+                    The 5 winning teams will be awarded official Winner Certificates along with Medals.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4 rounded bg-card/80 border border-surface-border flex items-start gap-3">
-                <ShieldCheck className="w-5 h-5 text-cyan-brand flex-shrink-0 mt-0.5" />
+              <div className="p-4 rounded bg-card/80 border border-cyan-brand/40 flex items-start gap-3">
+                <Award className="w-5 h-5 text-cyan-brand flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-mono font-bold text-xs text-offwhite uppercase">
-                    FORMAL HONORS CEREMONY
+                  <h4 className="font-mono font-bold text-xs text-cyan-brand uppercase">
+                    PARTICIPANTS
                   </h4>
                   <p className="text-[11px] font-mono text-dimwhite mt-1">
-                    Recognized during the Valedictory Ceremony at SIMATS School of Engineering.
+                    All participating teams that present their solution will receive official Participation Certificates.
                   </p>
                 </div>
               </div>

@@ -27,8 +27,8 @@ export const LocationSection: React.FC = () => {
           {/* Left Venue Information */}
           <div className="lg:col-span-7 space-y-6 flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
-              <span className="text-tertiary">005 /</span>
-              <span>HYBRID VENUE & PHYSICAL LOCATION</span>
+              <span className="text-tertiary">007 /</span>
+              <span>HYBRID VENUE &amp; PHYSICAL LOCATION</span>
             </div>
 
             <h2 className="font-display font-black text-4xl sm:text-6xl text-offwhite tracking-tight uppercase">
@@ -68,27 +68,15 @@ export const LocationSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Stylized Interactive Radar Graphic */}
+          {/* Right Venue Campus Showcase Image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full border border-cyan-brand/30 p-4 flex items-center justify-center bg-card/60">
-              {/* Concentric radar rings */}
-              <div className="absolute inset-4 rounded-full border border-cyan-brand/20 animate-ping opacity-20" />
-              <div className="absolute inset-12 rounded-full border border-surface-border" />
-              <div className="absolute inset-24 rounded-full border border-sunrise-brand/30" />
-
-              {/* Crosshair lines */}
-              <div className="absolute inset-x-0 top-1/2 h-[1px] bg-cyan-brand/20" />
-              <div className="absolute inset-y-0 left-1/2 w-[1px] bg-cyan-brand/20" />
-
-              {/* Center Beacon Pin */}
-              <div className="relative z-10 flex flex-col items-center gap-2 text-center p-4 bg-background/90 border border-cyan-brand/50 rounded shadow-xl">
-                <div className="h-3 w-3 rounded-full bg-sunrise-brand animate-ping" />
-                <span className="font-mono font-black text-xs text-offwhite tracking-wider">
-                  SIMATS ENG
-                </span>
-                <span className="text-[9px] font-mono text-cyan-brand">
-                  100% READY
-                </span>
+            <div className="relative w-full max-w-md rounded-lg border border-cyan-brand/40 bg-card/80 p-2 overflow-hidden shadow-[0_0_30px_rgba(0,240,255,0.2)] group">
+              <div className="relative rounded-md overflow-hidden h-[260px] sm:h-[300px] w-full">
+                <img
+                  src="/images/simats-campus.jpg"
+                  alt="SIMATS School of Engineering Campus"
+                  className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
             </div>
           </div>

@@ -2,10 +2,13 @@
 
 import React from "react";
 import { EVENT_CONFIG } from "@/config/event";
-import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, MapPin, Calendar } from "lucide-react";
+import { useCountdown } from "@/hooks/useCountdown";
+import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, Cpu, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const HeroSection: React.FC = () => {
+  const timeLeft = useCountdown(EVENT_CONFIG.countdownTargetISO);
+
   const handleRegisterClick = () => {
     if (EVENT_CONFIG.registrationUrl.includes("PLACEHOLDER")) {
       alert(
@@ -19,45 +22,10 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-between pt-28 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden"
     >
-      {/* Top Meta System Badge */}
-      <div className="flex flex-wrap items-center justify-center gap-4 z-10 pt-4">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/80 border border-cyan-brand/30 backdrop-blur-md"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-brand opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-brand"></span>
-          </span>
-          <span className="text-[11px] font-mono tracking-widest text-cyan-brand uppercase font-medium">
-            OFFICIAL SIH 2026 PREPARATION WARM-UP
-          </span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="hidden sm:flex items-center gap-4 text-xs font-mono text-dimwhite"
-        >
-          <span className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-sunrise-brand" />
-            {EVENT_CONFIG.venueName}
-          </span>
-          <span className="text-tertiary">|</span>
-          <span className="flex items-center gap-1.5 text-cyan-brand">
-            <Calendar className="w-3.5 h-3.5" />
-            {EVENT_CONFIG.eventDateDisplay}
-          </span>
-        </motion.div>
-      </div>
-
       {/* Main Title & Hero Visual Composition */}
-      <div className="my-auto z-10 py-10 flex flex-col items-center text-center justify-center">
+      <div className="my-auto z-10 py-6 flex flex-col items-center text-center justify-center w-full">
         {/* Sub-label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,8 +34,8 @@ export const HeroSection: React.FC = () => {
           className="flex items-center justify-center gap-2 mb-4"
         >
           <Terminal className="w-4 h-4 text-sunrise-brand" />
-          <span className="text-xs sm:text-sm font-mono tracking-widest text-dimwhite uppercase">
-            SIMATS SCHOOL OF ENGINEERING PRESENTS
+          <span className="text-xs sm:text-sm font-mono tracking-widest text-dimwhite uppercase text-center">
+            SIMATS SCHOOL OF ENGINEERING • DEPARTMENT OF MACHINE LEARNING PRESENTS
           </span>
         </motion.div>
 
@@ -96,14 +64,19 @@ export const HeroSection: React.FC = () => {
         </motion.div>
 
         {/* Tagline & Purpose Statement */}
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-6 max-w-2xl text-base sm:text-xl text-dimwhite font-sans font-light leading-relaxed mx-auto text-center"
+          className="mt-6 max-w-3xl text-center mx-auto space-y-2"
         >
-          &quot;{EVENT_CONFIG.tagline}&quot; — An industry-grade inter-college hybrid hackathon solving real previous-year Smart India Hackathon problem statements.
-        </motion.p>
+          <p className="text-lg sm:text-2xl text-offwhite font-medium tracking-wide">
+            &quot;{EVENT_CONFIG.tagline}&quot;
+          </p>
+          <p className="text-base sm:text-lg text-dimwhite font-light">
+            A National-grade inter-college hybrid hackathon solving real-world high-impact problem statements.
+          </p>
+        </motion.div>
 
         {/* Key Event Badges */}
         <motion.div
@@ -112,20 +85,41 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 font-mono text-xs"
         >
-          <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-surface-border text-offwhite flex items-center gap-2">
-            <Users className="w-3.5 h-3.5 text-cyan-brand" />
+          <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-amber-400/30 text-amber-400 flex items-center gap-2 bg-amber-400/5">
+            <Users className="w-3.5 h-3.5 text-amber-400" />
             <span>{EVENT_CONFIG.teamSizeDisplay}</span>
           </div>
 
-          <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-surface-border text-offwhite flex items-center gap-2">
-            <Shield className="w-3.5 h-3.5 text-violet-brand" />
+          <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-emerald-400/30 text-emerald-400 flex items-center gap-2 bg-emerald-400/5">
+            <Shield className="w-3.5 h-3.5 text-emerald-400" />
             <span>{EVENT_CONFIG.mode}</span>
           </div>
 
+          <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-cyan-brand/30 text-cyan-brand flex items-center gap-2 bg-cyan-brand/5">
+            <Cpu className="w-3.5 h-3.5 text-cyan-brand" />
+            <span>HARDWARE &amp; SOFTWARE TRACKS</span>
+          </div>
+
           <div className="px-3 py-1.5 rounded-sm bg-surface/90 border border-sunrise-brand/30 text-sunrise-brand flex items-center gap-2 bg-sunrise-brand/5">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Sparkles className="w-3.5 h-3.5 text-sunrise-brand" />
             <span>{EVENT_CONFIG.winnerCount} WINNING TEAMS HONORED</span>
           </div>
+        </motion.div>
+
+        {/* Synced Live Countdown Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.55 }}
+          className="mt-6 flex items-center justify-center"
+        >
+          <a
+            href="#countdown"
+            className="px-4 py-1.5 rounded-full bg-cyan-brand/10 border border-cyan-brand/40 text-cyan-brand font-mono text-xs flex items-center gap-2 hover:bg-cyan-brand/20 transition-all shadow-[0_0_20px_rgba(0,240,255,0.15)] group"
+          >
+            <Clock className="w-3.5 h-3.5 animate-pulse text-cyan-brand" />
+            <span>MISSION LAUNCH IN: <strong className="text-offwhite font-bold">{timeLeft.formatted}</strong></span>
+          </a>
         </motion.div>
 
         {/* Hero Action CTAs */}
@@ -153,25 +147,19 @@ export const HeroSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Hero Bottom Bar & Scroll Indicator */}
+      {/* Scroll Down Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
-        className="z-10 flex items-center justify-between border-t border-surface-border/40 pt-6 text-xs font-mono text-dimwhite"
+        className="z-10 flex items-center justify-center pt-2 text-xs font-mono text-dimwhite"
       >
-        <div className="flex items-center gap-4">
-          <span className="text-cyan-brand font-bold">001</span>
-          <span className="text-tertiary">/</span>
-          <span>INTRO & MISSION</span>
-        </div>
-
         <a
-          href="#countdown"
+          href="#about"
           className="flex items-center gap-2 text-dimwhite hover:text-cyan-brand transition-colors group"
         >
-          <span className="hidden sm:inline">LAUNCH COUNTDOWN</span>
-          <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+          <span>SCROLL FOR INTRO &amp; MISSION</span>
+          <ArrowDown className="w-4 h-4 text-cyan-brand group-hover:translate-y-1 transition-transform animate-bounce" />
         </a>
       </motion.div>
     </section>

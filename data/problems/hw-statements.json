@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "title": "ECHOLOCATE — Indoor Navigation for the Visually Impaired Using Ultrasonic Mesh",
+        "domain": "Assistive Technology",
+        "category": "Hardware + Software",
+        "description": "Develop a wearable indoor navigation system integrating ultrasonic ranging sensors, inertial motion tracking, and haptic feedback actuators to assist visually impaired users in safely navigating complex indoor environments without GPS or beacon-based infrastructure."
+    },
+    {
+        "id": 2,
+        "title": "Smart Helmet for Mine Worker Safety Monitoring",
+        "domain": "Industrial Safety & Wearables",
+        "category": "Hardware",
+        "description": "Engineer a rugged smart safety helmet featuring multi-gas sensors, temperature monitoring, impact detection, and wireless telemetry to continuously monitor underground mine conditions and instantly alert control centers during hazardous incidents."
+    },
+    {
+        "id": 3,
+        "title": "Autonomous Railway Track Crack Detection Robot",
+        "domain": "Transportation & Robotics",
+        "category": "Hardware",
+        "description": "Construct an autonomous rail-mounted inspection robot equipped with ultrasonic flaw detection, vibration sensing, computer vision cameras, and GPS-enabled reporting to identify railway track cracks, misalignments, and structural defects for predictive maintenance."
+    },
+    {
+        "id": 4,
+        "title": "Structural Health Monitoring System for Bridges",
+        "domain": "Civil Infrastructure & IoT",
+        "category": "Hardware",
+        "description": "Design a distributed structural health monitoring network incorporating strain gauges, vibration sensors, and wireless IoT communication to continuously assess bridge integrity and provide early warnings of structural stress, fatigue, and potential failure."
+    },
+    {
+        "id": 5,
+        "title": "Automated Hydroponic Nutrient Dosing System",
+        "domain": "Agriculture & Automation",
+        "category": "Hardware",
+        "description": "Develop an automated hydroponic nutrient management system integrating pH, electrical conductivity (EC), and water-level sensors with precision dosing pumps to maintain optimal nutrient balance and maximize crop growth without manual intervention."
+    },
+    {
+        "id": 6,
+        "title": "Earthquake Stabilized System",
+        "domain": "Disaster Management & Structural Safety",
+        "category": "Hardware",
+        "description": "Build an active earthquake stabilization platform utilizing multi-axis accelerometers, gyroscopes, and real-time motion control actuators to minimize structural vibrations and improve stability during seismic disturbances."
+    },
+    {
+        "id": 7,
+        "title": "Detection and Prevention of Tampering in Weighing and Measuring Instruments",
+        "domain": "Industrial Automation & Legal Metrology",
+        "category": "Hardware",
+        "description": "Engineer an intelligent tamper detection system for weighing and measuring instruments using load-cell anomaly analysis, enclosure tamper sensors, secure data logging, and wireless alerts to prevent unauthorized calibration and measurement fraud."
+    },
+    {
+        "id": 8,
+        "title": "Intelligent Pesticide Sprinkling System",
+        "domain": "Agriculture, FoodTech & Rural Development",
+        "category": "Hardware",
+        "description": "Develop a low-cost intelligent pesticide sprinkling system integrating computer vision, HSV color thresholding, and precision spray actuators to detect plant leaf infection severity and automatically apply proportional pesticide dosage while minimizing chemical overuse without requiring machine learning models."
+    }
+]

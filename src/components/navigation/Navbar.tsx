@@ -9,8 +9,9 @@ const NAV_ITEMS = [
   { label: "HOME", href: "#home" },
   { label: "PROBLEMS", href: "#problems" },
   { label: "TIMELINE", href: "#timeline" },
-  { label: "FAQ", href: "#faq" },
+  { label: "GUESTS", href: "#evaluators" },
   { label: "CONTACT", href: "#contact" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export const Navbar: React.FC = () => {
@@ -58,8 +59,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-surface-border/60 py-3 shadow-2xl"
-            : "bg-transparent py-5"
+            ? "bg-[#e5e7eb]/20 backdrop-blur-2xl border-b border-white/30 py-3.5 shadow-[0_10px_30px_rgba(255,255,255,0.05)]"
+            : "bg-[#e5e7eb]/15 backdrop-blur-2xl border-b border-white/20 py-4 shadow-[0_4px_25px_rgba(255,255,255,0.03)]"
         }`}
       >
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -68,13 +69,11 @@ export const Navbar: React.FC = () => {
             href="#home"
             className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-cyan-brand rounded-sm p-1"
           >
-            <div className="h-8 w-8 rounded-sm bg-gradient-to-tr from-cyan-brand via-violet-brand to-sunrise-brand p-[1px] flex items-center justify-center">
-              <div className="h-full w-full bg-background rounded-sm flex items-center justify-center group-hover:bg-cyan-brand/10 transition-colors">
-                <span className="font-display font-black text-xs text-cyan-brand tracking-tighter">
-                  A
-                </span>
-              </div>
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="AASHAV Logo"
+              className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            />
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 <span className="font-display font-black tracking-wider text-lg text-offwhite group-hover:text-cyan-brand transition-colors">
@@ -92,7 +91,7 @@ export const Navbar: React.FC = () => {
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden md:flex items-center gap-1 bg-surface/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-surface-border/50"
+            className="hidden md:flex items-center gap-1 bg-white/10 backdrop-blur-xl px-3.5 py-1.5 rounded-full border border-white/20 shadow-md"
             aria-label="Main Navigation"
           >
             {NAV_ITEMS.map((item) => {
@@ -156,7 +155,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[60px] z-30 bg-background/95 backdrop-blur-2xl border-b border-surface-border p-6 md:hidden shadow-2xl"
+            className="fixed inset-x-0 top-[60px] z-30 bg-[#0d1017]/95 backdrop-blur-2xl border-b border-white/20 p-6 md:hidden shadow-2xl"
           >
             <div className="flex flex-col gap-4">
               {NAV_ITEMS.map((item) => (
