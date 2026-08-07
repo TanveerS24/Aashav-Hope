@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { EVENT_CONFIG } from "@/config/event";
 import { Menu, X, ArrowUpRight, ShieldAlert } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -69,9 +70,11 @@ export const Navbar: React.FC = () => {
             href="#home"
             className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-cyan-brand rounded-sm p-1"
           >
-            <img
+            <Image
               src="/images/logo.png"
               alt="AASHAV Logo"
+              width={48}
+              height={48}
               className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <div className="flex flex-col">

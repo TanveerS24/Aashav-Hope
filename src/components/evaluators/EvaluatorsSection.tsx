@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Linkedin, Award, Briefcase, ExternalLink, ShieldCheck, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -93,9 +94,11 @@ export const EvaluatorsSection: React.FC = () => {
                 {/* Profile Avatar Frame */}
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-br from-cyan-brand via-surface-border to-sunrise-brand flex-shrink-0 shadow-[0_0_25px_rgba(0,240,255,0.2)]">
                   <div className="w-full h-full rounded-full overflow-hidden bg-card">
-                    <img
+                    <Image
                       src={person.image}
                       alt={person.name}
+                      width={200}
+                      height={200}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { EVENT_CONFIG } from "@/config/event";
 import { MapPin, Navigation, ExternalLink, Compass, ShieldAlert } from "lucide-react";
 
@@ -72,9 +73,11 @@ export const LocationSection: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md rounded-lg border border-cyan-brand/40 bg-card/80 p-2 overflow-hidden shadow-[0_0_30px_rgba(0,240,255,0.2)] group">
               <div className="relative rounded-md overflow-hidden h-[260px] sm:h-[300px] w-full">
-                <img
+                <Image
                   src="/images/simats-campus.jpg"
                   alt="SIMATS School of Engineering Campus"
+                  width={600}
+                  height={400}
                   className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
