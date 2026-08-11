@@ -31,21 +31,21 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "faq-4",
     question: "When does registration close?",
     answer:
-      "Registration closes strictly on 20 August 2026 at 2:00 PM IST. Early submission is strongly recommended as slots are limited.",
+      "Registration closes strictly on 27 August 2026 at 2:00 PM IST. Early submission is strongly recommended as slots are limited.",
     category: "Schedule",
   },
   {
     id: "faq-5",
     question: "When will selected teams be announced?",
     answer:
-      "The list of shortlisted teams will be officially published before 10:00 AM IST on 21 August 2026.",
+      "The list of shortlisted teams will be officially published on 27 August 2026 before 10:00 PM IST.",
     category: "Schedule",
   },
   {
     id: "faq-6",
     question: "When must selected teams confirm participation?",
     answer:
-      "Selected teams must complete their participation confirmation before 10:00 PM IST on 21 August 2026 to lock their spot.",
+      "Selected teams must complete their participation confirmation before 10:00 PM IST on 28 August 2026 to lock their spot.",
     category: "Schedule",
   },
   {

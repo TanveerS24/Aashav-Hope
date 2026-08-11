@@ -1,6 +1,6 @@
 # AASHAV — THE HOPE | Hackathon 2026
 
-Production-quality national-level inter-college hybrid hackathon website for **AASHAV — THE HOPE** taking place on **22 August 2026** at **SIMATS School of Engineering**.
+Production-quality national-level inter-college hybrid hackathon website for **AASHAV — THE HOPE** taking place on **29 August 2026** at **SIMATS School of Engineering**.
 
 Aashav is designed as an industry-oriented hackathon experience solving real-world civic and technological challenges.
 
@@ -104,10 +104,10 @@ Refer to [`data/README.md`](file:///c:/Users/strix/Desktop/Aashav/data/README.md
 ## Event Timeline & Rules Summary
 
 - **Registration Opens**: 07 August 2026
-- **Registration Closes**: 20 August 2026 — 2:00 PM IST
-- **Selected Teams Announced**: 21 August 2026 — Before 10:00 AM IST
-- **Participation Confirmation Cutoff**: 21 August 2026 — Before 10:00 PM IST
-- **Hackathon Day**: 22 August 2026
+- **Registration Closes**: 27 August 2026 — 2:00 PM IST
+- **Selected Teams Announced**: 27 August 2026 — Before 10:00 PM IST
+- **Participation Confirmation Cutoff**: 28 August 2026 — Before 10:00 PM IST
+- **Hackathon Day**: 29 August 2026
   - `08:30 AM`: Inauguration
   - `09:00 AM`: Hackathon Begins
   - `12:30 PM`: First Round Evaluation

@@ -20,7 +20,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     phaseId: "01",
     phaseTitle: "REGISTRATION",
     subtitle: "Team Formation & Application Submission",
-    dateRange: "07 AUG — 20 AUG 2026",
+    dateRange: "07 AUG — 27 AUG 2026",
     status: "active",
     events: [
       {
@@ -30,7 +30,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
         badge: "START",
       },
       {
-        time: "20 AUG 2026 — 10:00 AM",
+        time: "27 AUG 2026 — 02:00 PM",
         title: "Registration Closes",
         description: "Strict submission cutoff. No late team registrations will be accepted.",
         badge: "DEADLINE",
@@ -42,17 +42,17 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     phaseId: "02",
     phaseTitle: "SELECTION & CONFIRMATION",
     subtitle: "Shortlisting & Slot Locking",
-    dateRange: "21 AUGUST 2026",
+    dateRange: "27 AUG — 28 AUG 2026",
     status: "upcoming",
     events: [
       {
-        time: "20 AUG 2026 — Before 10:00 PM",
+        time: "27 AUG 2026 — Before 10:00 PM",
         title: "Selected Team List Announced",
         description: "Shortlisted teams notified via official channel & dashboard.",
         badge: "ANNOUNCEMENT",
       },
       {
-        time: "21 AUG 2026 — Before 10:00 PM",
+        time: "28 AUG 2026 — Before 10:00 PM",
         title: "Selected Teams Must Confirm Participation",
         description: "Mandatory confirmation cutoff to secure hybrid hackathon slots.",
         badge: "CONFIRMATION",
@@ -63,38 +63,38 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
   {
     phaseId: "03",
     phaseTitle: "HACKATHON DAY",
-    subtitle: "22 August 2026 — SIMATS Campus & Virtual Arenas",
-    dateRange: "22 AUGUST 2026",
+    subtitle: "29 August 2026 — SIMATS Campus & Virtual Arenas",
+    dateRange: "29 AUGUST 2026",
     status: "upcoming",
     events: [
       {
-        time: "22 AUG 2026 — 08:30 AM",
+        time: "29 AUG 2026 — 08:30 AM",
         title: "Inauguration",
         badge: "Address the crowd",
         description: "Opening keynote, briefing on problem constraints, and mentor allocation.",
       },
       {
-        time: "22 AUG 2026 — 09:00 AM",
+        time: "29 AUG 2026 — 09:00 AM",
         title: "Hackathon Begins",
         description: "Countdown clock triggers. Teams start rapid prototyping & development.",
         badge: "LIVE CODE",
         isMilestone: true,
       },
       {
-        time: "22 AUG 2026 — 12:30 PM",
+        time: "29 AUG 2026 — 12:30 PM",
         title: "First Round Evaluation",
         badge: "Evaluation",
         description: "Mid-way progress checkpoint & architectural review by industry judges.",
       },
       {
-        time: "22 AUG 2026 — 02:30 PM",
+        time: "29 AUG 2026 — 02:30 PM",
         title: "Hackathon Ends + Final Evaluation",
         description: "Repository freeze, code submission, and final jury presentation pitching.",
         badge: "CODE FREEZE",
         isMilestone: true,
       },
       {
-        time: "22 AUG 2026 — 03:00 PM",
+        time: "29 AUG 2026 — 03:00 PM",
         title: "Valedictory Ceremony + Winner Announcement",
         description: "Closing ceremony and formal honoring of the 5 winning teams.",
         badge: "CEREMONY",

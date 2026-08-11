@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aashav — The hope | Hackathon 2026",
     description:
-      "Build what tomorrow needs. The premier national-grade inter-college hybrid hackathon at SIMATS School of Engineering on 22 August 2026.",
+      "Build what tomorrow needs. The premier national-grade inter-college hybrid hackathon at SIMATS School of Engineering on 29 August 2026.",
     url: "https://aashav2026.com",
     siteName: "Aashav — The hope",
     type: "website",

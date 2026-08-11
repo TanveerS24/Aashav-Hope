@@ -34,7 +34,7 @@ export const TimelineSection: React.FC = () => {
         </h2>
 
         <p className="text-sm font-mono text-dimwhite max-w-xl mt-1">
-          Signal path tracking from team registration to the Valedictory Ceremony on 22 August 2026.
+          Signal path tracking from team registration to the Valedictory Ceremony on 29 August 2026.
         </p>
       </div>
 

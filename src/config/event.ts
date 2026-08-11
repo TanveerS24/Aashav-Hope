@@ -38,8 +38,8 @@ export const EVENT_CONFIG: EventConfig = {
   eventMeaning: "THE HOPE",
   tagline: "Build what tomorrow needs.",
   subTagline: "The premier national-grade inter-college hybrid hackathon at SIMATS School of Engineering.",
-  eventDateDisplay: "22 AUGUST 2026",
-  countdownTargetISO: "2026-08-22T09:00:00+05:30", // 22 Aug 2026 09:00 AM IST
+  eventDateDisplay: "29 AUGUST 2026",
+  countdownTargetISO: "2026-08-29T09:00:00+05:30", // 29 Aug 2026 09:00 AM IST
   timezone: "Asia/Kolkata",
   venueName: "SIMATS School of Engineering",
   departmentName: "Department of Machine Learning",
@@ -56,9 +56,9 @@ export const EVENT_CONFIG: EventConfig = {
   winnerCount: 5,
 
   registrationOpenDate: "07 August 2026",
-  registrationCloseDate: "20 August 2026 at 2:00 PM",
-  selectionAnnounceDate: "21 August 2026 before 10:00 AM",
-  selectionConfirmDeadline: "21 August 2026 before 10:00 PM",
+  registrationCloseDate: "27 August 2026 at 2:00 PM",
+  selectionAnnounceDate: "27 August 2026 before 10:00 PM",
+  selectionConfirmDeadline: "28 August 2026 before 10:00 PM",
 
   coordinator: {
     name: "S Tanveer Muhammed",

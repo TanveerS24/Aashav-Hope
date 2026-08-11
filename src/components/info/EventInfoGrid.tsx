@@ -24,7 +24,7 @@ export const EventInfoGrid: React.FC = () => {
           </div>
           <div className="mt-8">
             <div className="font-display font-black text-3xl sm:text-4xl text-offwhite tracking-tight">
-              22 AUG 2026
+              {EVENT_CONFIG.eventDateDisplay}
             </div>
             <div className="text-xs font-mono text-dimwhite mt-1">
               SATURDAY • 08:30 AM — 03:30 PM IST

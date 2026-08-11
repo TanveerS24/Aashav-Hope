@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             </button>
             <span className="text-offwhite font-bold">{EVENT_CONFIG.venueName}</span>
             <span className="text-cyan-brand font-semibold text-[11px] uppercase tracking-wider">{EVENT_CONFIG.departmentName}</span>
-            <span>22.08.2026 • INTER-COLLEGE HYBRID HACKATHON</span>
+            <span>29.08.2026 • INTER-COLLEGE HYBRID HACKATHON</span>
             <span className="text-sunrise-brand">NATIONAL-GRADE HACKATHON 2026</span>
           </div>
         </div>

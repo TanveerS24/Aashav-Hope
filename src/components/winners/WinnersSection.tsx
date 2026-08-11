@@ -48,7 +48,7 @@ export const WinnersSection: React.FC = () => {
             </h2>
 
             <p className="text-base sm:text-lg font-sans text-dimwhite leading-relaxed">
-              At the conclusion of the final evaluation on 22 August 2026, selected <strong className="text-offwhite">5 teams</strong> will be honored at the <strong className="text-sunrise-brand">Valedictory Ceremony</strong> and awarded official Winner Certificates with Medals. All participating teams will receive official Participation Certificates.
+              At the conclusion of the final evaluation on 29 August 2026, selected <strong className="text-offwhite">5 teams</strong> will be honored at the <strong className="text-sunrise-brand">Valedictory Ceremony</strong> and awarded official Winner Certificates with Medals. All participating teams will receive official Participation Certificates.
             </p>
 
             {/* Recognition Highlights */}
