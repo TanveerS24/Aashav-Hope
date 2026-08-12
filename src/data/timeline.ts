@@ -46,13 +46,13 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     status: "upcoming",
     events: [
       {
-        time: "27 AUG 2026 — Before 10:00 PM",
+        time: "27 AUG 2026 — Before 11:00 PM",
         title: "Selected Team List Announced",
         description: "Shortlisted teams notified via official channel & dashboard.",
         badge: "ANNOUNCEMENT",
       },
       {
-        time: "28 AUG 2026 — Before 10:00 PM",
+        time: "28 AUG 2026 — Before 11:00 AM",
         title: "Selected Teams Must Confirm Participation",
         description: "Mandatory confirmation cutoff to secure hybrid hackathon slots.",
         badge: "CONFIRMATION",
