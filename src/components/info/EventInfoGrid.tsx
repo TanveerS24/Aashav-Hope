@@ -95,16 +95,16 @@ export const EventInfoGrid: React.FC = () => {
         <div className="md:col-span-4 rounded-sm bg-gradient-to-br from-sunrise-brand/10 via-surface to-surface border border-sunrise-brand/40 p-6 flex flex-col justify-between relative overflow-hidden group hover:border-sunrise-brand transition-colors">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-mono text-sunrise-brand tracking-widest uppercase">
-              SPEC 05 // HONORED TEAMS
+              SPEC 05 // HONORED TEAMS &amp; TROPHIES
             </span>
             <Trophy className="w-4 h-4 text-sunrise-brand animate-pulse" />
           </div>
           <div className="mt-8 flex items-baseline gap-3">
             <div className="font-display font-black text-4xl sm:text-5xl text-sunrise-brand tracking-tight">
-              5 TEAMS
+              6 AWARDS
             </div>
             <div className="text-xs font-mono text-dimwhite">
-              HONORED AS WINNERS
+              5 TEAMS + 1 COLLEGE TROPHY
             </div>
           </div>
         </div>

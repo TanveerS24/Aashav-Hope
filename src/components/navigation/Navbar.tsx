@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { label: "PROBLEMS", href: "#problems" },
   { label: "TIMELINE", href: "#timeline" },
   { label: "GUESTS", href: "#evaluators" },
+  { label: "AWARDS", href: "#winners" },
   { label: "CONTACT", href: "#contact" },
   { label: "FAQ", href: "#faq" },
 ];
