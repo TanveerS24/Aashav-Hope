@@ -90,4 +90,11 @@ export const FAQ_ITEMS: FAQItem[] = [
       "All submissions will be evaluated by technical jury panels based on project completeness, real-world impact, usability, technical feasibility, and architectural defense.",
     category: "Rules",
   },
+  {
+    id: "faq-13",
+    question: "Is there a cash prize for this?",
+    answer:
+      "Since the event is fully sponsored by us, we do not have any cash prize.",
+    category: "General",
+  },
 ];
