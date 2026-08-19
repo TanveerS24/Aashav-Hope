@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { TIMELINE_PHASES } from "@/data/timeline";
-import { Clock } from "lucide-react";
+import { Clock, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const TimelineSection: React.FC = () => {
@@ -23,7 +23,7 @@ export const TimelineSection: React.FC = () => {
       className="relative py-24 px-4 sm:px-6 lg:px-8 max-w-[1600px] w-full mx-auto overflow-hidden"
     >
       {/* Section Header (Filter & Scroll Buttons Removed) */}
-      <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 mb-12">
+      <div className="flex flex-col items-center text-center sm:items-start sm:text-left gap-2 mb-8">
         <div className="flex items-center gap-2 font-mono text-xs text-cyan-brand tracking-widest uppercase">
           <span className="text-tertiary">005 /</span>
           <span>HORIZONTAL MISSION ROADMAP</span>
@@ -37,6 +37,58 @@ export const TimelineSection: React.FC = () => {
           Signal path tracking from team registration to the Valedictory Ceremony on 29 August 2026.
         </p>
       </div>
+
+      {/* Schedule Revision Disclaimer Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="relative rounded-lg bg-gradient-to-r from-sunrise-brand/15 via-card/90 to-surface/90 border border-sunrise-brand/40 p-5 sm:p-6 mb-12 backdrop-blur-md shadow-[0_0_25px_rgba(255,107,53,0.15)] overflow-hidden"
+      >
+        {/* Ambient Glow */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-sunrise-brand/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row gap-5 items-start lg:items-center justify-between">
+          <div className="flex items-start gap-4">
+            <div className="p-2.5 rounded-md bg-sunrise-brand/20 border border-sunrise-brand/40 text-sunrise-brand shrink-0 mt-0.5 sm:mt-0">
+              <AlertTriangle className="w-5 h-5 animate-pulse" />
+            </div>
+            <div>
+              <div className="flex flex-wrap items-center gap-2 mb-1.5">
+                <span className="px-2 py-0.5 text-[10px] font-mono font-bold tracking-wider uppercase rounded bg-sunrise-brand/20 text-sunrise-brand border border-sunrise-brand/40">
+                  IMPORTANT SCHEDULE UPDATE
+                </span>
+                <span className="text-xs font-mono text-tertiary">
+                  // NOTICE TO PARTICIPANTS
+                </span>
+              </div>
+              <p className="text-sm text-offwhite leading-relaxed">
+                The event timeline has been updated in the interest of participants registering from far away colleges and institutions. 
+                Registration will now close on <strong className="text-sunrise-brand font-semibold">24th August 2026 at 12:00 PM</strong>.
+              </p>
+              <p className="text-xs font-mono text-dimwhite mt-1.5 leading-relaxed">
+                Shortlisted teams will be announced on or before <span className="text-cyan-brand font-semibold">25th Aug, 12:00 PM</span> (circulated in groups &amp; emailed to team leaders). All selected teams must confirm participation before <span className="text-cyan-brand font-semibold">25th Aug, 10:00 PM</span>. We regret any inconvenience caused.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap sm:flex-nowrap gap-3 shrink-0 w-full lg:w-auto pt-3 lg:pt-0 border-t lg:border-t-0 border-surface-border/40">
+            <div className="bg-background/80 border border-surface-border px-3.5 py-2.5 rounded text-center min-w-[130px] flex-1 lg:flex-none">
+              <div className="text-[10px] font-mono text-tertiary uppercase">Registration Closes</div>
+              <div className="text-xs font-mono font-bold text-sunrise-brand mt-0.5">24 AUG • 12:00 PM</div>
+            </div>
+            <div className="bg-background/80 border border-surface-border px-3.5 py-2.5 rounded text-center min-w-[130px] flex-1 lg:flex-none">
+              <div className="text-[10px] font-mono text-tertiary uppercase">Shortlist Announced</div>
+              <div className="text-xs font-mono font-bold text-cyan-brand mt-0.5">25 AUG • ≤ 12:00 PM</div>
+            </div>
+            <div className="bg-background/80 border border-surface-border px-3.5 py-2.5 rounded text-center min-w-[130px] flex-1 lg:flex-none">
+              <div className="text-[10px] font-mono text-tertiary uppercase">Confirm Slot By</div>
+              <div className="text-xs font-mono font-bold text-cyan-brand mt-0.5">25 AUG • 10:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
 
       {/* Main Horizontal Timeline Track Container */}
       <div className="relative py-4">

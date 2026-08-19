@@ -56,9 +56,9 @@ export const EVENT_CONFIG: EventConfig = {
   winnerCount: 5,
 
   registrationOpenDate: "07 August 2026",
-  registrationCloseDate: "27 August 2026 at 2:00 PM",
-  selectionAnnounceDate: "27 August 2026 before 10:00 PM",
-  selectionConfirmDeadline: "28 August 2026 before 10:00 PM",
+  registrationCloseDate: "24 August 2026 at 12:00 PM",
+  selectionAnnounceDate: "25 August 2026 on or before 12:00 PM",
+  selectionConfirmDeadline: "25 August 2026 before 10:00 PM",
 
   coordinator: {
     name: "S Tanveer Muhammed",

@@ -20,7 +20,7 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     phaseId: "01",
     phaseTitle: "REGISTRATION",
     subtitle: "Team Formation & Application Submission",
-    dateRange: "07 AUG — 27 AUG 2026",
+    dateRange: "07 AUG — 24 AUG 2026",
     status: "active",
     events: [
       {
@@ -30,9 +30,9 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
         badge: "START",
       },
       {
-        time: "27 AUG 2026 — 02:00 PM",
+        time: "24 AUG 2026 — 12:00 PM",
         title: "Registration Closes",
-        description: "Strict submission cutoff. No late team registrations will be accepted.",
+        description: "Strict submission cutoff at 12:00 PM. No late team registrations will be accepted.",
         badge: "DEADLINE",
         isMilestone: true,
       },
@@ -42,19 +42,19 @@ export const TIMELINE_PHASES: TimelinePhase[] = [
     phaseId: "02",
     phaseTitle: "SELECTION & CONFIRMATION",
     subtitle: "Shortlisting & Slot Locking",
-    dateRange: "27 AUG — 28 AUG 2026",
+    dateRange: "24 AUG — 25 AUG 2026",
     status: "upcoming",
     events: [
       {
-        time: "27 AUG 2026 — Before 11:00 PM",
+        time: "25 AUG 2026 — On or Before 12:00 PM",
         title: "Selected Team List Announced",
-        description: "Shortlisted teams notified via official channel & dashboard.",
+        description: "Shortlisted teams circulated in official channels & team leaders will receive an email.",
         badge: "ANNOUNCEMENT",
       },
       {
-        time: "28 AUG 2026 — Before 11:00 AM",
+        time: "25 AUG 2026 — Before 10:00 PM",
         title: "Selected Teams Must Confirm Participation",
-        description: "Mandatory confirmation cutoff to secure hybrid hackathon slots.",
+        description: "Mandatory confirmation cutoff before 10:00 PM to secure hybrid hackathon slots.",
         badge: "CONFIRMATION",
         isMilestone: true,
       },
