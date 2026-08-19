@@ -60,7 +60,7 @@ export const TimelineSection: React.FC = () => {
                   IMPORTANT SCHEDULE UPDATE
                 </span>
                 <span className="text-xs font-mono text-tertiary">
-                  // NOTICE TO PARTICIPANTS
+                  {"// NOTICE TO PARTICIPANTS"}
                 </span>
               </div>
               <p className="text-sm text-offwhite leading-relaxed">
