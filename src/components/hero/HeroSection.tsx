@@ -3,7 +3,7 @@
 import React from "react";
 import { EVENT_CONFIG } from "@/config/event";
 import { useCountdown } from "@/hooks/useCountdown";
-import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, Cpu, Clock } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, Cpu, Clock, AlertTriangle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const HeroSection: React.FC = () => {
@@ -122,12 +122,32 @@ export const HeroSection: React.FC = () => {
           </a>
         </motion.div>
 
+        {/* Short Timeline Revision Disclaimer Pill */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.58 }}
+          className="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sunrise-brand/10 border border-sunrise-brand/40 text-dimwhite backdrop-blur-md shadow-[0_0_15px_rgba(255,107,53,0.12)] font-mono text-[11px] sm:text-xs"
+        >
+          <AlertTriangle className="w-3.5 h-3.5 text-sunrise-brand shrink-0 animate-pulse" />
+          <span>
+            <strong className="text-sunrise-brand uppercase tracking-wider font-bold">Notice:</strong>{" "}
+            Reg Closes <strong className="text-offwhite font-semibold">24 Aug, 12 PM</strong> • Shortlist <strong className="text-offwhite font-semibold">25 Aug, 12 PM</strong>
+          </span>
+          <a
+            href="#timeline"
+            className="text-cyan-brand hover:underline ml-1 font-semibold flex items-center gap-0.5"
+          >
+            Roadmap ➔
+          </a>
+        </motion.div>
+
         {/* Hero Action CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto"
+          className="mt-8 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto"
         >
           <button
             onClick={handleRegisterClick}
