@@ -21,17 +21,11 @@ export const Footer: React.FC = () => {
 
           <div className="flex flex-col items-center md:items-end text-center md:text-right font-mono text-xs text-dimwhite gap-3">
             <button
-              onClick={() => {
-                if (EVENT_CONFIG.registrationUrl.includes("PLACEHOLDER")) {
-                  alert("Registration URL is configured as a placeholder.");
-                } else {
-                  window.open(EVENT_CONFIG.registrationUrl, "_blank", "noopener,noreferrer");
-                }
-              }}
-              className="px-6 py-3 rounded bg-gradient-to-r from-cyan-brand via-cyan-dim to-violet-brand text-background font-mono font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,240,255,0.25)] hover:shadow-[0_0_35px_rgba(0,240,255,0.45)] hover:scale-105 active:scale-95 transition-all group mb-1"
+              disabled
+              className="px-6 py-2.5 rounded bg-surface/90 border border-rose-500/40 text-rose-300 font-mono font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(244,63,94,0.15)] cursor-not-allowed opacity-90 select-none mb-1"
             >
-              <span>REGISTER NOW</span>
-              <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+              <span>REGISTRATION CLOSED</span>
             </button>
             <span className="text-offwhite font-bold">{EVENT_CONFIG.venueName}</span>
             <span className="text-cyan-brand font-semibold text-[11px] uppercase tracking-wider">{EVENT_CONFIG.departmentName}</span>

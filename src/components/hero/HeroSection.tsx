@@ -150,11 +150,11 @@ export const HeroSection: React.FC = () => {
           className="mt-8 flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto"
         >
           <button
-            onClick={handleRegisterClick}
-            className="w-full sm:w-auto px-8 py-4 rounded-sm bg-gradient-to-r from-cyan-brand via-cyan-dim to-violet-brand text-background font-mono font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(0,240,255,0.3)] hover:shadow-[0_0_45px_rgba(0,240,255,0.5)] hover:scale-[1.02] active:scale-[0.98] transition-all group"
+            disabled
+            className="w-full sm:w-auto px-8 py-4 rounded-sm bg-surface/90 border border-rose-500/40 text-rose-300/90 font-mono font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(244,63,94,0.15)] cursor-not-allowed opacity-90 select-none"
           >
-            <span>REGISTER NOW</span>
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <span className="w-2 h-2 rounded-full bg-rose-500" />
+            <span>REGISTRATION CLOSED</span>
           </button>
 
           <a

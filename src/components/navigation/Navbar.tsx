@@ -127,11 +127,11 @@ export const Navbar: React.FC = () => {
           {/* Right Action CTA */}
           <div className="hidden sm:flex items-center gap-3">
             <button
-              onClick={handleRegisterClick}
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-sm bg-gradient-to-r from-cyan-brand via-cyan-dim to-violet-brand text-background font-mono font-bold text-xs tracking-wider uppercase shadow-[0_0_20px_rgba(0,240,255,0.25)] hover:shadow-[0_0_30px_rgba(0,240,255,0.45)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+              disabled
+              className="relative inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-surface/90 border border-rose-500/40 text-rose-300/90 font-mono font-bold text-[11px] tracking-wider uppercase cursor-not-allowed opacity-90 select-none shadow-[0_0_15px_rgba(244,63,94,0.15)]"
             >
-              <span>REGISTER NOW</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+              <span>REGISTRATION CLOSED</span>
             </button>
           </div>
 
@@ -175,14 +175,11 @@ export const Navbar: React.FC = () => {
               ))}
               <div className="pt-4 flex flex-col gap-3">
                 <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    handleRegisterClick();
-                  }}
-                  className="w-full py-3 rounded.sm bg-gradient-to-r from-cyan-brand to-violet-brand text-background font-mono font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-2 shadow-lg"
+                  disabled
+                  className="w-full py-3 rounded-sm bg-surface/90 border border-rose-500/40 text-rose-300 font-mono font-bold text-xs tracking-widest uppercase flex items-center justify-center gap-2 cursor-not-allowed opacity-90 select-none shadow-lg"
                 >
-                  <span>REGISTER NOW</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <span className="w-2 h-2 rounded-full bg-rose-500" />
+                  <span>REGISTRATION CLOSED</span>
                 </button>
                 <div className="flex items-center justify-center gap-2 text-[10px] font-mono text-dimwhite pt-2">
                   <span>HYBRID EVENT</span>
