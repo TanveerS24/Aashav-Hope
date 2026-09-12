@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { EVENT_CONFIG } from "@/config/event";
 import { useCountdown } from "@/hooks/useCountdown";
-import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, Cpu, Clock, AlertTriangle, Camera } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Sparkles, Terminal, Shield, Users, Cpu, Clock, AlertTriangle, Camera, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const HeroSection: React.FC = () => {
@@ -114,13 +114,23 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-6 flex items-center justify-center"
         >
-          <a
-            href="#countdown"
-            className="px-4 py-1.5 rounded-full bg-cyan-brand/10 border border-cyan-brand/40 text-cyan-brand font-mono text-xs flex items-center gap-2 hover:bg-cyan-brand/20 transition-all shadow-[0_0_20px_rgba(0,240,255,0.15)] group"
-          >
-            <Clock className="w-3.5 h-3.5 animate-pulse text-cyan-brand" />
-            <span>MISSION LAUNCH IN: <strong className="text-offwhite font-bold">{timeLeft.formatted}</strong></span>
-          </a>
+          {timeLeft.isLive ? (
+            <a
+              href="#countdown"
+              className="px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 font-mono text-xs flex items-center gap-2 hover:bg-emerald-500/20 transition-all shadow-[0_0_20px_rgba(16,185,129,0.15)] group"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+              <span>EVENT STATUS: <strong className="text-offwhite font-bold">CONCLUDED ({EVENT_CONFIG.eventDateDisplay})</strong></span>
+            </a>
+          ) : (
+            <a
+              href="#countdown"
+              className="px-4 py-1.5 rounded-full bg-cyan-brand/10 border border-cyan-brand/40 text-cyan-brand font-mono text-xs flex items-center gap-2 hover:bg-cyan-brand/20 transition-all shadow-[0_0_20px_rgba(0,240,255,0.15)] group"
+            >
+              <Clock className="w-3.5 h-3.5 animate-pulse text-cyan-brand" />
+              <span>MISSION LAUNCH IN: <strong className="text-offwhite font-bold">{timeLeft.formatted}</strong></span>
+            </a>
+          )}
         </motion.div>
 
         {/* Event Concluded & Gallery Notification Banner */}

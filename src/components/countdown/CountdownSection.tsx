@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { EVENT_CONFIG } from "@/config/event";
 import { useCountdown } from "@/hooks/useCountdown";
-import { Clock, ShieldAlert, Radio } from "lucide-react";
+import { Clock, Radio, Award, Camera, ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const CountdownSection: React.FC = () => {
@@ -43,13 +44,13 @@ export const CountdownSection: React.FC = () => {
             <div>
               <span className="text-[10px] font-mono text-cyan-brand tracking-widest uppercase flex items-center gap-1.5 mb-0.5">
                 <span className="text-tertiary">002 /</span>
-                <span>MISSION LAUNCH TIMING • {EVENT_CONFIG.timezone}</span>
+                <span>{timeLeft.isLive ? "MISSION ARCHIVE" : "MISSION LAUNCH TIMING"} • {EVENT_CONFIG.timezone}</span>
               </span>
               <h2 className="font-mono font-bold text-lg text-offwhite tracking-wider">
                 {timeLeft.isLive ? (
-                  <span className="text-sunrise-brand flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-sunrise-brand animate-ping" />
-                    AASHAV IS LIVE NOW
+                  <span className="text-emerald-400 flex items-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
+                    AASHAV HAS CONCLUDED
                   </span>
                 ) : (
                   "UNTIL AASHAV BEGINS"
@@ -59,24 +60,90 @@ export const CountdownSection: React.FC = () => {
           </div>
 
           <div className="font-mono text-xs text-dimwhite flex items-center gap-4 bg-card/60 px-4 py-2 rounded border border-surface-border">
-            <span>TARGET: {EVENT_CONFIG.eventDateDisplay}</span>
-            <span className="text-tertiary">|</span>
-            <span>09:00 AM IST</span>
+            {timeLeft.isLive ? (
+              <>
+                <span className="text-emerald-400 flex items-center gap-1.5 font-semibold">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  EVENT CONCLUDED
+                </span>
+                <span className="text-tertiary">|</span>
+                <span>{EVENT_CONFIG.eventDateDisplay}</span>
+              </>
+            ) : (
+              <>
+                <span>TARGET: {EVENT_CONFIG.eventDateDisplay}</span>
+                <span className="text-tertiary">|</span>
+                <span>09:00 AM IST</span>
+              </>
+            )}
           </div>
         </div>
 
-        {/* Countdown Grid Display */}
+        {/* Countdown Grid Display / Concluded View */}
         {timeLeft.isLive ? (
-          <div className="py-12 text-center flex flex-col items-center justify-center gap-4">
-            <div className="inline-flex items-center justify-center p-4 rounded-full bg-sunrise-brand/20 border border-sunrise-brand text-sunrise-brand">
-              <ShieldAlert className="w-12 h-12 animate-bounce" />
+          <div className="py-10 sm:py-14 text-center flex flex-col items-center justify-center gap-6 relative">
+            {/* Ambient Background Glow inside */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-brand/10 rounded-full blur-3xl pointer-events-none" />
+
+            {/* Badge Icon */}
+            <div className="relative inline-flex items-center justify-center p-4 sm:p-5 rounded-2xl bg-surface/90 border border-cyan-brand/30 shadow-[0_0_30px_rgba(0,240,255,0.2)]">
+              <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-brand/20 via-violet-brand/20 to-sunrise-brand/20 text-cyan-brand">
+                <Award className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-brand" />
+              </div>
             </div>
-            <h3 className="font-display font-black text-4xl sm:text-6xl text-offwhite tracking-tight uppercase">
-              AASHAV IS LIVE
-            </h3>
-            <p className="text-dimwhite font-mono text-sm max-w-md">
-              The hackathon arena is open. Teams are actively building solutions to industry problem statements.
-            </p>
+
+            {/* Title & Subtitle */}
+            <div className="space-y-3 max-w-2xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs tracking-wider uppercase">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Mission Completed Successfully</span>
+              </div>
+              <h3 className="font-display font-black text-4xl sm:text-6xl text-offwhite tracking-tight uppercase">
+                AASHAV HAS CONCLUDED
+              </h3>
+              <p className="text-dimwhite font-mono text-sm sm:text-base leading-relaxed">
+                The hackathon arena has officially concluded. Heartfelt congratulations to all the winners, innovative participants, mentors, and jury members who made Aashav 2026 an extraordinary benchmark in tech innovation!
+              </p>
+            </div>
+
+            {/* Direct Gallery Link CTA */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
+              <Link
+                href="/gallery"
+                className="w-full sm:w-auto px-8 py-4 rounded-md bg-gradient-to-r from-cyan-brand via-cyan-dim to-violet-brand text-background font-mono font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(0,240,255,0.35)] hover:shadow-[0_0_45px_rgba(0,240,255,0.6)] hover:scale-[1.03] active:scale-[0.98] transition-all group cursor-pointer"
+              >
+                <Camera className="w-4 h-4 text-background group-hover:scale-110 transition-transform" />
+                <span>VIEW EVENT GALLERY</span>
+                <ArrowRight className="w-4 h-4 text-background group-hover:translate-x-1 transition-transform" />
+              </Link>
+
+              <a
+                href="#winners"
+                className="w-full sm:w-auto px-6 py-4 rounded-md bg-card/80 border border-surface-border hover:border-cyan-brand/40 text-offwhite font-mono font-medium text-sm tracking-wider uppercase flex items-center justify-center gap-2 hover:bg-card-hover transition-all"
+              >
+                <span>HONORED WINNERS</span>
+              </a>
+            </div>
+
+            {/* Micro Highlights Badges */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-[11px] font-mono text-dimwhite">
+              <span className="px-3 py-1 rounded-full bg-card border border-surface-border flex items-center gap-1.5">
+                <CheckCircle2 className="w-3 h-3 text-cyan-brand" />
+                Keynote &amp; Dignitaries
+              </span>
+              <span className="px-3 py-1 rounded-full bg-card border border-surface-border flex items-center gap-1.5">
+                <CheckCircle2 className="w-3 h-3 text-cyan-brand" />
+                Idea Pitch Presentations
+              </span>
+              <span className="px-3 py-1 rounded-full bg-card border border-surface-border flex items-center gap-1.5">
+                <CheckCircle2 className="w-3 h-3 text-cyan-brand" />
+                Jury Evaluations
+              </span>
+              <span className="px-3 py-1 rounded-full bg-card border border-surface-border flex items-center gap-1.5">
+                <CheckCircle2 className="w-3 h-3 text-cyan-brand" />
+                Award Distribution
+              </span>
+            </div>
           </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
@@ -167,12 +234,31 @@ export const CountdownSection: React.FC = () => {
         )}
 
         {/* Bottom Micro Status */}
-        <div className="mt-8 pt-6 border-t border-surface-border/60 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-dimwhite">
+        <div className="mt-8 pt-6 border-t border-surface-border/60 flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono text-dimwhite">
           <span className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-cyan-brand" />
-            SYNCHRONIZED WITH IST (UTC+5:30)
+            {timeLeft.isLive ? (
+              <>
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <span>ARCHIVE ACTIVE • {EVENT_CONFIG.venueName}</span>
+              </>
+            ) : (
+              <>
+                <Clock className="w-3.5 h-3.5 text-cyan-brand" />
+                <span>SYNCHRONIZED WITH IST (UTC+5:30)</span>
+              </>
+            )}
           </span>
-          <span>Just as excited as you are</span>
+          {timeLeft.isLive ? (
+            <Link
+              href="/gallery"
+              className="text-cyan-brand hover:text-cyan-light flex items-center gap-1.5 transition-colors font-semibold"
+            >
+              <Camera className="w-3.5 h-3.5" />
+              <span>Explore full photo collection &amp; milestones ➔</span>
+            </Link>
+          ) : (
+            <span>Just as excited as you are</span>
+          )}
         </div>
       </div>
     </section>
