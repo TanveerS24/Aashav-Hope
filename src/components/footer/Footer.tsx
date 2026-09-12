@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
               className="px-6 py-2.5 rounded bg-surface/90 border border-rose-500/40 text-rose-300 font-mono font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(244,63,94,0.15)] cursor-not-allowed opacity-90 select-none mb-1"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-              <span>REGISTRATION CLOSED</span>
+              <span>EVENT CONCLUDED</span>
             </button>
             <span className="text-offwhite font-bold">{EVENT_CONFIG.venueName}</span>
             <span className="text-cyan-brand font-semibold text-[11px] uppercase tracking-wider">{EVENT_CONFIG.departmentName}</span>
